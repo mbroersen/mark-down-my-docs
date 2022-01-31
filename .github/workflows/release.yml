@@ -18,6 +18,6 @@ jobs:
       - run: npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
       - run: npm publish
       # fix pushing of new version to master
-      - run: git push origin HEAD:master
+      - run: git push origin HEAD:main
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
