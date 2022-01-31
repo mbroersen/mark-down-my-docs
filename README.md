@@ -10,7 +10,7 @@ npm install mark-down-my-docs
 Run command with source directory and docs directory.
 
 ```shell
-mark-down-my-docs src docs
+mark-down-my-docs src/ docs/
 ```
 
 ## support
