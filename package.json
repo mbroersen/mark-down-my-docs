@@ -1,0 +1,29 @@
+{
+  "name": "mark-down-my-docs",
+  "version": "1.0.0",
+  "description": "markdown documentor for ts-docs",
+  "main": "mark-down-my-docs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbroersen/mark-down-my-docs.git"
+  },
+  "keywords": [
+    "MarkDown",
+    "ts-doc",
+    "js-doc",
+    "documentation",
+    "generator"
+  ],
+  "author": "Mark Broersen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mbroersen/mark-down-my-docs/issues"
+  },
+  "homepage": "https://github.com/mbroersen/mark-down-my-docs#readme",
+  "bin": {
+    "mark-down-my-docs": "mark-down-my-docs.js"
+  }
+}
