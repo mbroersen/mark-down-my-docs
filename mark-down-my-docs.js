@@ -15,8 +15,8 @@ if (myArgs.includes('--help')) {
 const srcDir = myArgs[0] ?? 'src';
 const docDir = myArgs[1] ?? 'docs';
 
-const srcDirectory = path.join(__dirname, srcDir);
-const docsDirectory = path.join(__dirname, docDir);
+const srcDirectory = path.join(process.cwd(), srcDir);
+const docsDirectory = path.join(process.cwd(), docDir);
 
 const SourceDirectory = require('./core/SourceDirectory');
 const MarkDown = require('./core/MarkDown');
