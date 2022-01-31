@@ -88,6 +88,8 @@ class MarkDown {
         this.createDirectory(fileSource);
         this.clean(name);
 
+        console.info(this.docsPath, name);
+
         for (const docBlock of docBlocks) {
             this.writePart(docBlock.docsPath, name);
             this.parseOwner(docBlock.owner, name);
@@ -107,6 +109,7 @@ class MarkDown {
         if (!content) {
             return;
         }
+
 
         fs.writeFileSync(`${this.docsPath}${name}.md`, content, {flag: 'a'});
     }
