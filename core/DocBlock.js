@@ -1,6 +1,5 @@
 const DocProperty = require('./DocProperty');
 const path = require('path');
-const srcDirectory = path.join(__dirname, 'core');
 
 /**
  * @class {DocBlock}
@@ -17,7 +16,7 @@ class DocBlock {
      * @return {string}
      */
     get inDocsPath() {
-        return this.sourcePath.replace(srcDirectory, '').replace(/([tj]s)$/, '');
+        return this.sourcePath.replace(process.env.srcDirectory, '').replace(/([tj]s)$/, '');
     }
 
     /**
