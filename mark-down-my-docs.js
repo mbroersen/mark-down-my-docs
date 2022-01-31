@@ -9,10 +9,6 @@ if (myArgs.includes('--help')) {
     console.info('usage : mark-down-my-docs.js [srcDirectory] [docsDirectory]');
     console.info('\nglobal options : ');
     console.table([{'command': '--help', 'description': 'Show help'}], ['command', 'description']);
-
-
-
-
     return;
 }
 
