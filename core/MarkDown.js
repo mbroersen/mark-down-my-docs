@@ -74,7 +74,7 @@ class MarkDown {
      * @param name
      */
     parsePropertyContent(content, name) {
-        this.writePart(content.trimStart().replaceAll(/(\*)/g, '').trimEnd().replace(/(\{[^}\n]+})/g, "> ```ts\n> $1\n> ```\n\n"), name);
+        this.writePart(content.trimStart().replace(/(\*)/g, '').trimEnd().replace(/(\{[^}\n]+})/g, "> ```ts\n> $1\n> ```\n\n"), name);
     }
 
     /**
