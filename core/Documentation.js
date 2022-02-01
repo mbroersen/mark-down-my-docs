@@ -32,7 +32,7 @@ class Documentation {
      * @return {IterableIterator<RegExpMatchArray>}
      */
     dockBlocksInContent(content) {
-        return (content ?? "").matchAll(/(\/\*\*\n)(?<content>((?<!\*\/\n)([^/]))*)(\*\/\n\s*(export (default )?)?(?<owner>(class|public|private|protected)?\s?.*)\n)/gm);
+        return (content ?? "").matchAll(/(\/\*\*\n)(?<content>((?<!\*\/\n)([^]))*)(\*\/\n\s*(export (default )?)?(?<owner>(class|public|private|protected)?\s?.*)\n)/gm);
     }
 
     /**
