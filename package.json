@@ -1,6 +1,6 @@
 {
   "name": "mark-down-my-docs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "markdown documentor for ts-docs",
   "main": "mark-down-my-docs.js",
   "scripts": {
