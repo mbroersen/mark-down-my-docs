@@ -1,5 +1,5 @@
 
-# class DocBlock [~source~](../core/DocBlock.js)
+# class DocBlock [#source](../core/DocBlock.js)
 
 
 ### class 

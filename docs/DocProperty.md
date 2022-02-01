@@ -1,5 +1,5 @@
 
-# class DocProperty [~source~](../core/DocProperty.js)
+# class DocProperty [#source](../core/DocProperty.js)
 
 
 ### class 
