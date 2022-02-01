@@ -36,7 +36,7 @@ mark-down-my-docs src/ docs/
 ## Support
 supports `.js` and `.ts` files with `js-doc` blocks
 
-runs on node *16.13.1
+runs on node *16.x
 
 ## Suggestions?
 [Please create a new issue](https://github.com/mbroersen/mark-down-my-docs/issues/new)
