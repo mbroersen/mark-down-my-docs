@@ -1,7 +1,5 @@
 
-# class DocProperty
-^ [src](../src//DocProperty.ts) ^
-
+# class DocProperty [#source](../core/DocProperty.js)
 
 
 ### class 

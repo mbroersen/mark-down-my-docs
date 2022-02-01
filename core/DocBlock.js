@@ -1,5 +1,4 @@
 const DocProperty = require('./DocProperty');
-const path = require('path');
 
 /**
  * @class {DocBlock}

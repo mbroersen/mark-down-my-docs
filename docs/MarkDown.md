@@ -1,8 +1,24 @@
 
-# class MarkDown
-^ [src](../src//MarkDown.ts) ^
+# class MarkDown [#source](../core/MarkDown.js)
 
 
+### class 
+> ```ts
+> {MarkDown}
+> ```
+
+
+
+### description 
+Create MarkDown files from `js-doc` blocks
+
+### example 
+ ```markdown
+  # MarkDown
+ 
+  ## description Create MarkDown files from `js-doc` blocks
+ 
+  ```
 ## constructor(docsPath)
 
 
@@ -14,55 +30,92 @@ docsPath
 
 
 ### param 
-name
+string name
 ## createDirectory(fileSource)
 
 
 
 ### param 
-fileSource
-## parseOwner(owner, name)
+> ```ts
+> {Source}
+> ```
+
+ fileSource
+## parseOwner(owner, name, source)
 
 
 
 ### param 
-owner
+> ```ts
+> {string}
+> ```
+
+ owner
 
 ### param 
-name
+> ```ts
+> {string}
+> ```
+
+ name
 ## parseProperty(property, name)
 
 
 
 ### param 
-property
+> ```ts
+> {DocProperty}
+> ```
+
+ property
 
 ### param 
-name
+> ```ts
+> {string}
+> ```
+
+ name
 ## parsePropertyContent(content, name)
 
 
 
 ### param 
-content
+> ```ts
+> {string}
+> ```
+
+ content
 
 ### param 
-name
-## write(docBlocks, fileSource)
+> ```ts
+> {string}
+> ```
+
+ name
+## write(fileSource)
 
 
 
 ### param 
-docBlocks
+> ```ts
+> {Source}
+> ```
 
-### param 
-fileSource
+ fileSource
 ## writePart(content, name)
 
 
 
 ### param 
-content
+> ```ts
+> {string}
+> ```
+
+ content
 
 ### param 
-name
+> ```ts
+> {string}
+> ```
+
+ name
