@@ -1,5 +1,5 @@
 
-# class Documentation [~source~](../core/Documentation.js)
+# class Documentation [#source](../core/Documentation.js)
 
 
 ### class 

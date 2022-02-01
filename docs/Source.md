@@ -1,5 +1,5 @@
 
-# class Source [~source~](../core/Source.js)
+# class Source [#source](../core/Source.js)
 
 
 ### class 

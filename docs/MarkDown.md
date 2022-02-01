@@ -1,5 +1,5 @@
 
-# class MarkDown [~source~](../core/MarkDown.js)
+# class MarkDown [#source](../core/MarkDown.js)
 
 
 ### class 

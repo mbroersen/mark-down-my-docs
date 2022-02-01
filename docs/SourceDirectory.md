@@ -1,5 +1,5 @@
 
-# class SourceDirectory [~source~](../core/SourceDirectory.js)
+# class SourceDirectory [#source](../core/SourceDirectory.js)
 
 
 ### class 

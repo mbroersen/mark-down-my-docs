@@ -62,7 +62,7 @@ class MarkDown {
         owner = owner.replace(/\s\{\s*/, '');
 
         if (owner.startsWith('class')) {
-            this.writePart(`\n# ${owner} [~source~](${path.relative(`${this.docsPath}${path.parse(name).dir}`, source.path)})\n`, name);
+            this.writePart(`\n# ${owner} [#source](${path.relative(`${this.docsPath}${path.parse(name).dir}`, source.path)})\n`, name);
         } else {
             this.writePart(`\n## ${owner}\n\n`, name);
         }
