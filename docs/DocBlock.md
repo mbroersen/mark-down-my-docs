@@ -1,7 +1,5 @@
 
-# class DocBlock
-^ [src](../src//DocBlock.ts) ^
-
+# class DocBlock [~source~](../core/DocBlock.js)
 
 
 ### class 

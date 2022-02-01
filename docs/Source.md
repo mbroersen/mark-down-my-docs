@@ -1,7 +1,5 @@
 
-# class Source
-^ [src](../src//Source.ts) ^
-
+# class Source [~source~](../core/Source.js)
 
 
 ### class 
@@ -10,19 +8,31 @@
 > ```
 
 
+
+### description 
+Reads contents of javascript or typescript file
+
+### example 
+ ```js
+  new Source('./helloWorld.js');
+  ```
 ## constructor(path)
 
 
 
 ### param 
-path
+> ```ts
+> {string}
+> ```
+
+ path
 ## get basename()
 
 
 
 ### return 
 > ```ts
-> {any}
+> {string}
 > ```
 
 
@@ -32,16 +42,32 @@ path
 
 ### return 
 > ```ts
-> {any}
+> {string}
 > ```
 
 
-## read()
+## dockBlocksInContent(content)
 
 
+
+### param 
+content
 
 ### return 
 > ```ts
-> {any}
+> {IterableIterator<RegExpMatchArray>}
+> ```
+
+
+## * read()
+
+
+
+### description 
+All parsable DocBlocks in source
+
+### return 
+> ```ts
+> {Generator<DocBlock, void, any>}
 > ```
 
