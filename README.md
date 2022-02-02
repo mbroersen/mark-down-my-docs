@@ -5,9 +5,9 @@
 `MarkDown` generator for `.js` and `.ts` source files with `js-doc` documentation blocks 
 
 ## Why?
-I was looking for an out-of-the-box, simple setup document generator for a project of mine.
+I was looking for an out-of-the-box, simple-to-setup documentation generator for a project of mine.
 So I could easily generate my documentation for this project. 
-It was harder than it sounded, too hard.
+It was harder than it sounded, too hard. Turns out that it didn't exist, or I could not find it. That's why I created this package, hope it helps you as much as it helped me.
 
 ### These were my demands
 1. Runs right away after installation without extra setup.
@@ -17,9 +17,6 @@ It was harder than it sounded, too hard.
 5. Has as few dependencies as possible.
 6. Is fast
 7. Is a node application
-
-Turns out that it didn't exist, or I could not find it.
-That's why I created this package, hope it helps you as much as it helped me
 
 ## Installation
 ```shell
