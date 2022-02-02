@@ -1,4 +1,4 @@
-const Source = require('./Source');
+const Source = require('./read/Source');
 const fs = require('fs');
 const path = require('path');
 

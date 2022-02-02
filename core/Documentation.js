@@ -1,14 +1,19 @@
-const DocBlock = require('./DocBlock');
-
 /**
  * @class Documentation
+ * @description Bridge for reader and writer
+ *
+ * @example
+ * ```js
+ * const doc = new Documentation(reader, writer);
+ * doc->write();
+ * ```
  */
 class Documentation {
 
     /**
      *
-     * @param source
-     * @param writer
+     * @param {Source} source
+     * @param {MarkDown} writer
      */
     constructor(source, writer) {
         this.source = source;
@@ -16,7 +21,7 @@ class Documentation {
     }
 
     /**
-     *
+     * @description start writing the documentation
      */
     write() {
         for (const fileSource of this.source.read()) {
@@ -26,6 +31,5 @@ class Documentation {
         }
     }
 }
-
 
 module.exports = Documentation;

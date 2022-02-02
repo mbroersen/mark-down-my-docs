@@ -1,3 +1,6 @@
+[Go back to index](Index.md)
+
+---
 
 # class SourceDirectory [#source](../core/SourceDirectory.js)
 

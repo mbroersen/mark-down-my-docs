@@ -1,5 +1,8 @@
+[Go back to index](../Index.md)
 
-# class DocProperty [#source](../core/DocProperty.js)
+---
+
+# class DocProperty [#source](../../core/doc/DocProperty.js)
 
 
 ### class 

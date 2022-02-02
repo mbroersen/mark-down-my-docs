@@ -1,5 +1,8 @@
+[Go back to index](../Index.md)
 
-# class DocBlock [#source](../core/DocBlock.js)
+---
+
+# class DocBlock [#source](../../core/doc/DocBlock.js)
 
 
 ### class 

@@ -1,17 +1,41 @@
+[Go back to index](Index.md)
+
+---
 
 # class Documentation [#source](../core/Documentation.js)
 
 
 ### class 
 Documentation
+
+### description 
+Bridge for reader and writer
+
+### example 
+ ```js
+  const doc = new Documentation(reader, writer);
+  doc->write();
+  ```
 ## constructor(source, writer)
 
 
 
 ### param 
-source
+> ```ts
+> {Source}
+> ```
+
+ source
 
 ### param 
-writer
+> ```ts
+> {MarkDown}
+> ```
+
+ writer
 ## write()
 
+
+
+### description 
+start writing the documentation

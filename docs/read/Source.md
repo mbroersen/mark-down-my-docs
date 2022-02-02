@@ -1,5 +1,8 @@
+[Go back to index](../Index.md)
 
-# class Source [#source](../core/Source.js)
+---
+
+# class Source [#source](../../core/read/Source.js)
 
 
 ### class 
@@ -14,7 +17,12 @@ Reads contents of javascript or typescript file
 
 ### example 
  ```js
-  new Source('./helloWorld.js');
+  const source = new Source('./helloWorld.js');
+ 
+  for (const docBlock of source.read()) {
+      // docblocks
+  }
+ 
   ```
 ## constructor(path)
 
@@ -56,6 +64,26 @@ content
 ### return 
 > ```ts
 > {IterableIterator<RegExpMatchArray>}
+> ```
+
+
+## hasDockBlocks()
+
+
+
+### return 
+> ```ts
+> {RegExpMatchArray|false}
+> ```
+
+
+## readFile()
+
+
+
+### return 
+> ```ts
+> {string}
 > ```
 
 

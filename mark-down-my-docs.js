@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 const path = require('path');
-const fs = require('fs');
 
 // app requirements
 const SourceDirectory = require('./core/SourceDirectory');
-const MarkDown = require('./core/MarkDown');
+const MarkDown = require('./core/write/MarkDown');
 const Documentation = require('./core/Documentation');
 
 // arguments
