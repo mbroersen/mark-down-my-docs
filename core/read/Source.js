@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const DocBlock = require("./DocBlock");
+const DocBlock = require("../doc/DocBlock");
 
 /**
  * @class {Source}
@@ -9,7 +9,12 @@ const DocBlock = require("./DocBlock");
  *
  * @example
  * ```js
- * new Source('./helloWorld.js');
+ * const source = new Source('./helloWorld.js');
+ *
+ * for (const docBlock of source.read()) {
+ *     // docblocks
+ * }
+ *
  * ```
  */
 class Source {
@@ -49,11 +54,28 @@ class Source {
 
     /**
      *
+     * @return {RegExpMatchArray|false}
+     */
+    hasDockBlocks() {
+        const content = this.readFile();
+        return content.match(/(\/\*\*\n).*(\*\/)/gms) ?? false;
+    }
+
+    /**
+     *
+     * @return {string}
+     */
+    readFile() {
+        return fs.readFileSync(this.path, {encoding: 'utf-8', flag: 'r'});
+    }
+
+    /**
+     *
      * @description All parsable DocBlocks in source
      * @return {Generator<DocBlock, void, any>}
      */
     * read() {
-        const content = fs.readFileSync(this.path, {encoding: 'utf-8', flag: 'r'});
+        const content = this.readFile();
         for (const docblock of this.dockBlocksInContent(content)) {
             yield new DocBlock(this.path, docblock.groups.owner, docblock.groups.content);
         }
