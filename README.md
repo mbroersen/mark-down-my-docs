@@ -5,21 +5,18 @@
 `MarkDown` generator for `.js` and `.ts` source files with `js-doc` documentation blocks 
 
 ## Why?
-I was looking for an out of the box, simple setup document generator for a project of mine.
+I was looking for an out-of-the-box, simple-to-setup documentation generator for a project of mine.
 So I could easily generate my documentation for this project. 
-It was harder than it sounded, to hard.
+It was harder than it sounded, too hard. Turns out that it didn't exist, or I could not find it. That's why I created this package, hope it helps you as much as it helped me.
 
-### These where my demands
+### These were my demands
 1. Runs right away after installation without extra setup.
 2. Supports typescript and javascript.
 3. Supports js-docs.
 4. Generates MarkDown files.
-5. Has as little dependencies as possible.
+5. Has as few dependencies as possible.
 6. Is fast
 7. Is a node application
-
-Turns out that it didn't exist, or I could not find it.
-That's why I created this package, hope it helps you as much as it helped me
 
 ## Installation
 ```shell
@@ -36,7 +33,7 @@ mark-down-my-docs src/ docs/
 ## Support
 supports `.js` and `.ts` files with `js-doc` blocks
 
-runs on node *16.x
+`runs on node 14.x and 16.x`
 
 ## Suggestions?
 [Please create a new issue](https://github.com/mbroersen/mark-down-my-docs/issues/new)
