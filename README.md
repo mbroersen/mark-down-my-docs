@@ -1,6 +1,6 @@
 # mark-down-my-docs
-![npm](https://img.shields.io/npm/dt/mark-down-my-docs?style=for-the-badge)
-![npm](https://img.shields.io/npm/v/mark-down-my-docs?style=for-the-badge)
+[![npm](https://img.shields.io/npm/dt/mark-down-my-docs?style=for-the-badge)](https://www.npmjs.com/package/mark-down-my-docs)
+[![npm](https://img.shields.io/npm/v/mark-down-my-docs?style=for-the-badge)](https://www.npmjs.com/package/mark-down-my-docs)
 
 `MarkDown` generator for `.js` and `.ts` source files with `jsdoc` documentation blocks 
 
