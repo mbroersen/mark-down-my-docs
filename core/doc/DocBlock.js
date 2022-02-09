@@ -51,7 +51,7 @@ class DocBlock {
      * @return {IterableIterator<RegExpMatchArray>}
      */
     propertiesInContent() {
-        return this.content.replace(/ {2,}/g, '')
+        return this.content.replace(/ {2,}/g, ' ')
             .replace(/\n/g, `\n\n`)
             .matchAll(/^(( ?\* @(?<name>[^ \n]+))(?<content>((?!^ ?\*? @).*$\n?)+)?)/gm);
     }
