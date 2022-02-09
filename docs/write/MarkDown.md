@@ -7,13 +7,14 @@
 
 ### class 
 > ```ts
-> {MarkDown}
+> MarkDown
 > ```
 
 
 
-### description 
-Create MarkDown files from `js-doc` blocks
+
+### description Create MarkDown files from `js-doc` blocks
+
 
 ### example 
  ```markdown
@@ -22,188 +23,218 @@ Create MarkDown files from `js-doc` blocks
   ## description Create MarkDown files from `js-doc` blocks
  
   ```
+
 ## constructor(docsPath)
 
 
 
-### param 
-docsPath
+### param  docsPath
+> ```ts
+> string
+> ```
+
+
+
 ## clean(name)
 
 
 
-### description 
-Removes documentation file
+### description Removes documentation file
 
-### param 
+
+### param  name
 > ```ts
-> {string}
+> string
 > ```
 
- name
+
+
 ## createDirectory(fileSource)
 
 
 
-### description 
-Creates all directories in documentation path based on source path
+### description Creates all directories in documentation path based on source path
 
-### param 
+
+### param  fileSource
 > ```ts
-> {Source}
+> Source
 > ```
 
- fileSource
+
+
 ## parseOwner(owner, name, source)
 
 
 
-### description 
-write header for docblock
+### description write header for docblock
 
-### param 
+
+### param  owner
 > ```ts
-> {string}
+> string
 > ```
 
- owner
 
-### param 
+
+
+### param  name
 > ```ts
-> {string}
+> string
 > ```
 
- name
+
+
+
+### param  source
+> ```ts
+> Source
+> ```
+
+
+
 ## parseProperty(property, name)
 
 
 
-### description 
-handle js-doc tags
+### description handle js-doc tags
 
-### param 
+
+### param  property
 > ```ts
-> {DocProperty}
+> DocProperty
 > ```
 
- property
 
-### param 
+
+
+### param  name
 > ```ts
-> {string}
+> string
 > ```
 
- name
+
+
 ## parsePropertyContent(content, name)
 
 
 
-### description 
-write content of js-doc tag
+### description write content of js-doc tag
 
-### param 
+
+### param  content
 > ```ts
-> {string}
+> string
 > ```
 
- content
 
-### param 
+
+
+### param  name
 > ```ts
-> {string}
+> string
 > ```
 
- name
+
+
 ## write(fileSource)
 
 
 
-### description 
-start writing markdown
+### description start writing markdown
 
-### param 
+
+### param  fileSource
 > ```ts
-> {Source}
+> Source
 > ```
 
- fileSource
+
+
 ## nameByFileSource(fileSource)
 
 
 
-### description 
-Set right output name and path
+### description Set right output name and path
 
-### param 
+
+### param  fileSource
 > ```ts
-> {Source}
+> Source
 > ```
 
- fileSource
+
+
 
 ### return 
 > ```ts
-> {string}
+> string
 > ```
+
 
 
 ## writePart(content, name)
 
 
 
-### description 
-write part if content is present.
+### description write part if content is present.
 
-### param 
+
+### param  content
 > ```ts
-> {string}
+> string
 > ```
 
- content
 
-### param 
+
+
+### param  name
 > ```ts
-> {string}
+> string
 > ```
 
- name
+
+
 ## writeHeader(fileSource, name)
 
 
 
-### description 
-write a header to go back to index
+### description write a header to go back to index
 
-### param 
+
+### param  fileSource
 > ```ts
-> {Source}
+> Source
 > ```
 
- fileSource
 
-### param 
+
+
+### param  name
 > ```ts
-> {string}
+> string
 > ```
 
- name
+
+
 ## writeIndexPart(fileSource, name)
 
 
 
-### description 
-write `Index.md`
+### description write `Index.md`
 
-### param 
+
+### param  fileSource
 > ```ts
-> {Source}
+> Source
 > ```
 
- fileSource
 
-### param 
+
+
+### param  name
 > ```ts
-> {string}
+> string
 > ```
 
- name
+

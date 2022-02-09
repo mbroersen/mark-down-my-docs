@@ -6,26 +6,64 @@
 
 
 ### class 
-> ```ts
-> {DocProperty}
-> ```
-
 
 ## constructor(name, content = null)
 
 
 
-### param 
-name
+### example 
+```js
+const property = new DocProperty('description', 'hello world');
+property.name; // string
+property.content; // string
+property.hasContent; // boolean
+ ```
 
-### param 
-content
+
+### param  name
+> ```ts
+> string
+> ```
+
+
+
+
+### param  content
+> ```ts
+> string|null
+> ```
+
+
+
 ## get hasContent()
 
 
 
 ### return 
 > ```ts
-> {boolean}
+> boolean
 > ```
+
+
+
+## get content()
+
+
+
+### return 
+> ```ts
+> string
+> ```
+
+
+
+## get name()
+
+
+
+### return 
+> ```ts
+> string
+> ```
+
 

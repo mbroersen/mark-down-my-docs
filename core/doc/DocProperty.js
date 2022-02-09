@@ -1,16 +1,22 @@
 /**
- * @class {DocProperty}
+ * @class
  */
 class DocProperty {
 
     /**
+     * @example ```js
+     *  const property = new DocProperty('description', 'hello world');
+     *  property.name; // string
+     *  property.content; // string
+     *  property.hasContent; // boolean
+     * ```
      *
-     * @param name
-     * @param content
+     * @param {string} name
+     * @param {string|null} content
      */
     constructor(name, content = null) {
-        this.name = name;
-        this.content = content;
+        this._name = name;
+        this._content = content;
     }
 
     /**
@@ -18,7 +24,30 @@ class DocProperty {
      * @return {boolean}
      */
     get hasContent() {
-        return this.content !== null;
+        return this._content !== null;
+    }
+
+    /**
+     *
+     * @return {string}
+     */
+    get content() {
+        return (this._content ?? '')
+            .trimStart()
+            .replace(/(\*)/g, '')
+            .replace(/\n{2,}/g, `\n`)
+            .trimEnd();
+    }
+
+
+
+    /**
+     *
+     * @return {string}
+     */
+    get name() {
+        return this._name
+            .replace(/\s\*\s/, '');
     }
 
 }

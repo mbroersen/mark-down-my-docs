@@ -5,37 +5,39 @@
 # class Documentation [#source](../core/Documentation.js)
 
 
-### class 
-Documentation
+### class Documentation
 
-### description 
-Bridge for reader and writer
+
+### description Bridge for reader and writer
+
 
 ### example 
  ```js
   const doc = new Documentation(reader, writer);
   doc->write();
   ```
+
 ## constructor(source, writer)
 
 
 
-### param 
+### param  source
 > ```ts
-> {Source}
+> Source
 > ```
 
- source
 
-### param 
+
+
+### param  writer
 > ```ts
-> {MarkDown}
+> MarkDown
 > ```
 
- writer
+
+
 ## write()
 
 
 
-### description 
-start writing the documentation
+### description start writing the documentation
