@@ -93,7 +93,7 @@
 
 
 
-## parseProperty(property, name)
+## parseProperty(property)
 
 
 
@@ -107,15 +107,7 @@
 
 
 
-
-### param  name
-> ```ts
-> string
-> ```
-
-
-
-## parsePropertyContent(content, name)
+## parsePropertyContent(content)
 
 
 
@@ -123,14 +115,6 @@
 
 
 ### param  content
-> ```ts
-> string
-> ```
-
-
-
-
-### param  name
 > ```ts
 > string
 > ```
@@ -173,7 +157,7 @@
 
 
 
-## writePart(content, name)
+## writePart(content)
 
 
 
@@ -186,6 +170,12 @@
 > ```
 
 
+
+## writeFile(name)
+
+
+
+### description write content to markdown file.
 
 
 ### param  name

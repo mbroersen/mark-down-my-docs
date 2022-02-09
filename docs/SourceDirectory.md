@@ -22,8 +22,8 @@
  
   // Outputs Sources in generator
   for (const source of sourceDirectory.read()) {
- // instance of Source
- source.read() // get content
+  // instance of Source
+  source.read() // get content
   }
  
   ```

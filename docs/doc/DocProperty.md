@@ -13,11 +13,11 @@
 
 ### example 
 ```js
-const property = new DocProperty('description', 'hello world');
-property.name; // string
-property.content; // string
-property.hasContent; // boolean
- ```
+  const property = new DocProperty('description', 'hello world');
+  property.name; // string
+  property.content; // string
+  property.hasContent; // boolean
+  ```
 
 
 ### param  name
