@@ -2,7 +2,7 @@
 ![npm](https://img.shields.io/npm/dt/mark-down-my-docs?style=for-the-badge)
 ![npm](https://img.shields.io/npm/v/mark-down-my-docs?style=for-the-badge)
 
-`MarkDown` generator for `.js` and `.ts` source files with `js-doc` documentation blocks 
+`MarkDown` generator for `.js` and `.ts` source files with `jsdoc` documentation blocks 
 
 ## Why?
 I was looking for an out-of-the-box, simple-to-setup documentation generator for a project of mine.
@@ -12,7 +12,7 @@ It was harder than it sounded, too hard. Turns out that it didn't exist, or I co
 ### These were my demands
 1. Runs right away after installation without extra setup.
 2. Supports typescript and javascript.
-3. Supports js-docs.
+3. Supports jsdoc.
 4. Generates MarkDown files.
 5. Has as few dependencies as possible.
 6. Is fast
@@ -29,6 +29,7 @@ Run command with source directory and docs directory.
 ```shell
 mark-down-my-docs src/ docs/
 ```
+![mark-down-my-docs](./mark-down-my-docs.gif)
 
 ## Support
 supports `.js` and `.ts` files with `js-doc` blocks
