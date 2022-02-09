@@ -4,9 +4,15 @@
 class DocProperty {
 
     /**
+     * @example ```js
+     *  const property = new DocProperty('description', 'hello world');
+     *  property.name; // string
+     *  property.content; // string
+     *  property.hasContent; // boolean
+     * ```
      *
-     * @param name
-     * @param content
+     * @param {string} name
+     * @param {string|null} content
      */
     constructor(name, content = null) {
         this._name = name;

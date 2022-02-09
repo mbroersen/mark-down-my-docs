@@ -4,6 +4,13 @@ const DocProperty = require('./DocProperty');
  * @class
  */
 class DocBlock {
+
+    /**
+     *
+     * @param {string} sourcePath
+     * @param {string} owner
+     * @param {string} content
+     */
     constructor(sourcePath, owner, content) {
         this.sourcePath = sourcePath;
         this._owner = owner;
