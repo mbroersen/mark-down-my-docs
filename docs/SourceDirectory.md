@@ -7,13 +7,14 @@
 
 ### class 
 > ```ts
-> {SourceDirectory}
+> SourceDirectory
 > ```
 
 
 
-### description 
-Reads contents of source directory with javascript or typescript files
+
+### description Reads contents of source directory with javascript or typescript files
+
 
 ### example 
  ```js
@@ -21,42 +22,45 @@ Reads contents of source directory with javascript or typescript files
  
   // Outputs Sources in generator
   for (const source of sourceDirectory.read()) {
-      // instance of Source
-      source.read() // get content
+ // instance of Source
+ source.read() // get content
   }
  
   ```
+
 ## constructor(path)
 
 
 
-### param 
-path
+### param path
+
 ## * read()
 
 
 
-### description 
-will output list of Source for each file in directory or subdirectory
+### description will output list of Source for each file in directory or subdirectory
+
 
 ### return 
 > ```ts
-> {Generator<Source, void, any>}
+> Generator<Source, void, any>
 > ```
+
 
 
 ## * scanDirectory(srcPath)
 
 
 
-### description 
-will output list of path names for each file in directory or subdirectory
+### description will output list of path names for each file in directory or subdirectory
 
-### param 
-srcPath
+
+### param srcPath
+
 
 ### return 
 > ```ts
-> {Generator<string|any, void, any>}
+> Generator<string|any, void, any>
 > ```
+
 

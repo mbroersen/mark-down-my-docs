@@ -6,9 +6,32 @@
 
 
 ### class 
+
+## constructor(sourcePath, owner, content)
+
+
+
+### param  sourcePath
 > ```ts
-> {DocBlock}
+> string
 > ```
+
+
+
+
+### param  owner
+> ```ts
+> string
+> ```
+
+
+
+
+### param  content
+> ```ts
+> string
+> ```
+
 
 
 ## get inDocsPath()
@@ -17,8 +40,20 @@
 
 ### return 
 > ```ts
-> {string}
+> string
 > ```
+
+
+
+## get owner()
+
+
+
+### return 
+> ```ts
+> string
+> ```
+
 
 
 ## * properties()
@@ -27,8 +62,9 @@
 
 ### return 
 > ```ts
-> {Generator<DocProperty, void, any>}
+> Generator<DocProperty, void, any>
 > ```
+
 
 
 ## propertiesInContent()
@@ -36,4 +72,8 @@
 
 
 ### return 
-{}
+> ```ts
+> IterableIterator<RegExpMatchArray>
+> ```
+
+

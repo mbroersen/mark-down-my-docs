@@ -7,41 +7,45 @@
 
 ### class 
 > ```ts
-> {Source}
+> Source
 > ```
 
 
 
-### description 
-Reads contents of javascript or typescript file
+
+### description Reads contents of javascript or typescript file
+
 
 ### example 
  ```js
   const source = new Source('./helloWorld.js');
  
   for (const docBlock of source.read()) {
-      // docblocks
+ // docblocks
   }
  
   ```
+
 ## constructor(path)
 
 
 
-### param 
+### param  path
 > ```ts
-> {string}
+> string
 > ```
 
- path
+
+
 ## get basename()
 
 
 
 ### return 
 > ```ts
-> {string}
+> string
 > ```
+
 
 
 ## get relativePath()
@@ -50,21 +54,23 @@ Reads contents of javascript or typescript file
 
 ### return 
 > ```ts
-> {string}
+> string
 > ```
+
 
 
 ## dockBlocksInContent(content)
 
 
 
-### param 
-content
+### param content
+
 
 ### return 
 > ```ts
-> {IterableIterator<RegExpMatchArray>}
+> IterableIterator<RegExpMatchArray>
 > ```
+
 
 
 ## hasDockBlocks()
@@ -73,8 +79,9 @@ content
 
 ### return 
 > ```ts
-> {RegExpMatchArray|false}
+> RegExpMatchArray|false
 > ```
+
 
 
 ## readFile()
@@ -83,19 +90,21 @@ content
 
 ### return 
 > ```ts
-> {string}
+> string
 > ```
+
 
 
 ## * read()
 
 
 
-### description 
-All parsable DocBlocks in source
+### description All parsable DocBlocks in source
+
 
 ### return 
 > ```ts
-> {Generator<DocBlock, void, any>}
+> Generator<DocBlock, void, any>
 > ```
+
 
