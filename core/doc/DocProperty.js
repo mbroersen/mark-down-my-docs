@@ -35,7 +35,7 @@ class DocProperty {
         return (this._content ?? '')
             .trimStart()
             .replace(/(\*)/g, '')
-            .replaceAll(/\n{2,}/g, `\n`)
+            .replace(/\n{2,}/g, `\n`)
             .trimEnd();
     }
 
