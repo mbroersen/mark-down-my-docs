@@ -1,5 +1,5 @@
 /**
- * @class {DocProperty}
+ * @class
  */
 class DocProperty {
 
@@ -9,8 +9,8 @@ class DocProperty {
      * @param content
      */
     constructor(name, content = null) {
-        this.name = name;
-        this.content = content;
+        this._name = name;
+        this._content = content;
     }
 
     /**
@@ -18,7 +18,30 @@ class DocProperty {
      * @return {boolean}
      */
     get hasContent() {
-        return this.content !== null;
+        return this._content !== null;
+    }
+
+    /**
+     *
+     * @return {string}
+     */
+    get content() {
+        return (this._content ?? '')
+            .trimStart()
+            .replace(/(\*)/g, '')
+            .replaceAll(/\n{2,}/g, `\n`)
+            .trimEnd();
+    }
+
+
+
+    /**
+     *
+     * @return {string}
+     */
+    get name() {
+        return this._name
+            .replace(/\s\*\s/, '');
     }
 
 }
