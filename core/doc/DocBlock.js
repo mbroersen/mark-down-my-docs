@@ -22,7 +22,7 @@ class DocBlock {
 
     /**
      *
-     * @return {*}
+     * @return {string}
      */
     get owner() {
         return this._owner
@@ -41,7 +41,7 @@ class DocBlock {
 
     /**
      *
-     * @return {*}
+     * @return {IterableIterator<RegExpMatchArray>}
      */
     propertiesInContent() {
         return this.content.replaceAll(/ {2,}/g, '')
