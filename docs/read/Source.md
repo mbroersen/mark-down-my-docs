@@ -21,7 +21,7 @@
   const source = new Source('./helloWorld.js');
  
   for (const docBlock of source.read()) {
- // docblocks
+  // docblocks
   }
  
   ```

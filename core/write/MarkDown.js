@@ -22,6 +22,7 @@ class MarkDown {
     constructor(docsPath) {
         this.docsPath = docsPath;
         this.firstWrite = true;
+        this.content = '';
 
         if (!this.docsPath.endsWith(path.sep)) {
             this.docsPath += path.sep;
@@ -34,6 +35,7 @@ class MarkDown {
      * @param {string} name
      */
     clean(name) {
+        this.content = '';
         try {
             fs.rmSync(`${this.docsPath}${name}.md`);
         } catch (e) {
@@ -63,9 +65,9 @@ class MarkDown {
      */
     parseOwner(owner, name, source) {
         if (owner.startsWith('class')) {
-            this.writePart(`\n# ${owner} [#source](${path.relative(`${this.docsPath}${path.parse(name).dir}`, source.path)})\n`, name);
+            this.writePart(`\n# ${owner} [#source](${path.relative(`${this.docsPath}${path.parse(name).dir}`, source.path)})\n`);
         } else {
-            this.writePart(`\n## ${owner}\n\n`, name);
+            this.writePart(`\n## ${owner}\n\n`);
         }
     }
 
@@ -73,30 +75,30 @@ class MarkDown {
      * @description handle js-doc tags
      *
      * @param {DocProperty} property
-     * @param {string} name
      */
-    parseProperty(property, name) {
-        this.writePart(`\n\n### ${property.name.replace(/\s\*\s/, '')} `, name);
+    parseProperty(property) {
+        this.writePart(`\n\n### ${property.name.replace(/\s\*\s/, '')} `);
 
         if (property.hasContent) {
-            if (property.content.match(/```/)) {
-                this.writePart(`\n`, name);
+            const content = property.content;
+
+            if (content.match(/```/)) {
+                this.writePart(`\n`);
             }
 
-            this.parsePropertyContent(property.content, name);
+            this.parsePropertyContent(content);
         }
 
-        this.writePart(`\n`, name);
+        this.writePart(`\n`);
     }
 
     /**
      * @description write content of js-doc tag
      *
      * @param {string} content
-     * @param {string} name
      */
-    parsePropertyContent(content, name) {
-        this.writePart(content.replace(/^{{?(.*)}?}(.*)$/gm, "$2\n> ```ts\n> $1\n> ```\n\n"), name);
+    parsePropertyContent(content) {
+        this.writePart(content.replace(/^{{?(.*)}?}(.*)$/gm, "$2\n> ```ts\n> $1\n> ```\n\n"));
     }
 
     /**
@@ -119,15 +121,15 @@ class MarkDown {
         this.writeHeader(fileSource, name)
 
         for (const docBlock of fileSource.read()) {
-            this.writePart(docBlock.docsPath, name);
             this.parseOwner(docBlock.owner, name, fileSource);
 
             for (const property of docBlock.properties()) {
-                this.parseProperty(property, name);
+                this.parseProperty(property);
             }
         }
 
         this.writeIndexPart(fileSource, name);
+        this.writeFile(name);
         this.firstWrite = false;
     }
 
@@ -150,14 +152,22 @@ class MarkDown {
      * @description write part if content is present.
      *
      * @param {string} content
-     * @param {string} name
      */
-    writePart(content, name) {
+    writePart(content) {
         if (!content) {
             return;
         }
 
-        fs.writeFileSync(`${this.docsPath}${name}.md`, content, {flag: 'a'});
+        this.content += content;
+    }
+
+    /**
+     * @description write content to markdown file.
+     *
+     * @param {string} name
+     */
+    writeFile(name) {
+        fs.writeFileSync(`${this.docsPath}${name}.md`, this.content, {flag: 'a'});
     }
 
     /**
@@ -170,7 +180,7 @@ class MarkDown {
         this.createDirectory(fileSource);
         const indexPath = path.relative(`${this.docsPath}${path.parse(name).dir}`, `${this.docsPath}${path.sep}Index.md`);
         let header = `[Go back to index](${indexPath})\n\n---\n`;
-        this.writePart(header, name);
+        this.writePart(header);
     }
 
     /**

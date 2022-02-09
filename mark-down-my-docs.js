@@ -34,4 +34,5 @@ console.time('done in');
 docs.write();
 console.group();
 console.timeEnd('done in');
+console.log(`memory usage: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB`);
 console.groupEnd();
