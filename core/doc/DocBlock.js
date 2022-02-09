@@ -1,12 +1,12 @@
 const DocProperty = require('./DocProperty');
 
 /**
- * @class {DocBlock}
+ * @class
  */
 class DocBlock {
     constructor(sourcePath, owner, content) {
         this.sourcePath = sourcePath;
-        this.owner = owner;
+        this._owner = owner;
         this.content = content;
     }
 
@@ -15,7 +15,18 @@ class DocBlock {
      * @return {string}
      */
     get inDocsPath() {
-        return this.sourcePath.replace(process.env.srcDirectory, '').replace(/([tj]s)$/, '');
+        return this.sourcePath
+            .replace(process.env.srcDirectory, '')
+            .replace(/([tj]s)$/, '');
+    }
+
+    /**
+     *
+     * @return {*}
+     */
+    get owner() {
+        return this._owner
+            .replace(/((\s?[={]\s?)+$)/gm, '');
     }
 
     /**
@@ -33,7 +44,9 @@ class DocBlock {
      * @return {*}
      */
     propertiesInContent() {
-        return this.content.matchAll(/(\*?\s?@)(?<name>[^\s\n]+)(?<content>[^@]*)?/gm);
+        return this.content.replaceAll(/ {2,}/g, '')
+            .replaceAll(/\n/g, `\n\n`)
+            .matchAll(/^(( ?\* @(?<name>[^ \n]+))(?<content>((?!^ ?\*? @).*$\n?)+)?)/gm);
     }
 }
 
