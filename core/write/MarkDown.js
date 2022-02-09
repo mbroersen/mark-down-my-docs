@@ -79,6 +79,10 @@ class MarkDown {
         this.writePart(`\n\n### ${property.name.replace(/\s\*\s/, '')} `, name);
 
         if (property.hasContent) {
+            if (property.content.match(/```/)) {
+                this.writePart(`\n`, name);
+            }
+
             this.parsePropertyContent(property.content, name);
         }
 
