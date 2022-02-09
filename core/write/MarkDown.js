@@ -12,13 +12,12 @@ const path = require('path');
  * ## description Create *MarkDown* files from `js-doc` blocks
  *
  * ```
- *
  */
 class MarkDown {
 
     /**
      *
-     * @param docsPath
+     * @param {string} docsPath
      */
     constructor(docsPath) {
         this.docsPath = docsPath;
@@ -60,10 +59,9 @@ class MarkDown {
      *
      * @param {string} owner
      * @param {string} name
+     * @param {Source} source
      */
     parseOwner(owner, name, source) {
-        owner = owner.replace(/\s\{\s*/, '');
-
         if (owner.startsWith('class')) {
             this.writePart(`\n# ${owner} [#source](${path.relative(`${this.docsPath}${path.parse(name).dir}`, source.path)})\n`, name);
         } else {
@@ -92,7 +90,7 @@ class MarkDown {
      * @param {string} name
      */
     parsePropertyContent(content, name) {
-        this.writePart(content.trimStart().replace(/(\*)/g, '').trimEnd().replace(/(\{[^}\n]+})/g, "> ```ts\n> $1\n> ```\n\n"), name);
+        this.writePart(content.replace(/^{{?(.*)}?}$/g, "> ```ts\n> $1\n> ```\n\n"), name);
     }
 
     /**
