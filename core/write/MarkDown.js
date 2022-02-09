@@ -76,11 +76,13 @@ class MarkDown {
      * @param {string} name
      */
     parseProperty(property, name) {
-        this.writePart(`\n\n### ${property.name.replace(/\s\*\s/, '')} \n`, name);
+        this.writePart(`\n\n### ${property.name.replace(/\s\*\s/, '')} `, name);
 
         if (property.hasContent) {
             this.parsePropertyContent(property.content, name);
         }
+
+        this.writePart(`\n`, name);
     }
 
     /**
@@ -90,7 +92,7 @@ class MarkDown {
      * @param {string} name
      */
     parsePropertyContent(content, name) {
-        this.writePart(content.replace(/^{{?(.*)}?}$/g, "> ```ts\n> $1\n> ```\n\n"), name);
+        this.writePart(content.replace(/^{{?(.*)}?}(.*)$/gm, "$2\n> ```ts\n> $1\n> ```\n\n"), name);
     }
 
     /**
