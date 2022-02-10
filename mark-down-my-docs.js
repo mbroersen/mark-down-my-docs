@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+
+// add node dependencies
 const path = require('path');
 
 // app requirements
