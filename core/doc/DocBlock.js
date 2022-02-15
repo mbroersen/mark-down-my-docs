@@ -41,7 +41,7 @@ class DocBlock {
     }
 
     describe() {
-        const match = this._owner.match(/^((?<access>(private)|(public)|(protected)) )?(?<kind>((class)|(get)|(set)|(function)))?(?<is_method>(?<is_generator>\* )?[^(]+[(][^)]*[)] \{$)?(?<is_property>[^=]+\=)?/m)
+        const match = this._owner.match(/^((?<access>(private)|(public)|(protected)) )?(?<kind>((class)|(get)|(set)|(function)))?(?<is_method>(?<is_generator>\* )?[^(]+[(][^)]*[)]\:? ?(?<returns>([ ]+)) \{$)?(?<is_property>[^=]+\=)?/mi)
         let kind = match.groups?.is_method ? 'method' : null;
         kind = match.groups?.is_property ? 'property' : kind;
 
@@ -51,9 +51,9 @@ class DocBlock {
             access: match.groups?.access,
             kind: match.groups?.kind ?? kind,
             is_generator: !!match.groups?.is_generator,
+            returns: match.groups?.returns,
         }
     }
-
 
     /**
      *
