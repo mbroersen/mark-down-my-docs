@@ -36,6 +36,25 @@ class DocBlock {
             .replace(/((\s?[={]\s?)+$)/gm, '');
     }
 
+    get ownerName() {
+        return this._owner.match(/^(((private)|(public)|(protected)) )?(((class)|(get)|(set)|(function)) )?((\* )|#)?(?<name>[a-z0-9\_\-]+)/im)?.groups?.name;
+    }
+
+    describe() {
+        const match = this._owner.match(/^((?<access>(private)|(public)|(protected)) )?(?<kind>((class)|(get)|(set)|(function)))?(?<is_method>(?<is_generator>\* )?[^(]+[(][^)]*[)] \{$)?(?<is_property>[^=]+\=)?/m)
+        let kind = match.groups?.is_method ? 'method' : null;
+        kind = match.groups?.is_property ? 'property' : kind;
+
+        return {
+            owner: this._owner,
+            name: this.ownerName,
+            access: match.groups?.access,
+            kind: match.groups?.kind ?? kind,
+            is_generator: !!match.groups?.is_generator,
+        }
+    }
+
+
     /**
      *
      * @return {Generator<DocProperty, void, any>}
