@@ -40,8 +40,12 @@ class DocBlock {
         return this._owner.match(/^(((private)|(public)|(protected)) )?(((class)|(get)|(set)|(function)) )?((\* )|#)?(?<name>[a-z0-9\_\-]+)/im)?.groups?.name;
     }
 
+    /**
+     *
+     * @return {{owner: string, access: string | undefined, kind: (string|string), name, is_generator: boolean, returns: string | undefined, params: string[]}}
+     */
     describe() {
-        const match = this._owner.match(/^((?<access>(private)|(public)|(protected)) )?(?<kind>((class)|(get)|(set)|(function)))?(?<is_method>(?<is_generator>\* )?[^(]+[(][^)]*[)]\:? ?(?<returns>([ ]+)) \{$)?(?<is_property>[^=]+\=)?/mi)
+        const match = this._owner.match(/^((?<access>(private)|(public)|(protected)) )?(?<kind>((class)|(get)|(set)|(function)))?(?<is_method>(?<is_generator>\* )?[^(]+[(](?<params>[^)]*)[)](: ?(?<returns>[^{]+))? \{$)?(?<is_property>[^=]+\=)?/m)
         let kind = match.groups?.is_method ? 'method' : null;
         kind = match.groups?.is_property ? 'property' : kind;
 
@@ -52,6 +56,9 @@ class DocBlock {
             kind: match.groups?.kind ?? kind,
             is_generator: !!match.groups?.is_generator,
             returns: match.groups?.returns,
+            params: (match.groups?.params ?? '')
+                .split(',')
+                .filter((value) => value !== ''),
         }
     }
 
