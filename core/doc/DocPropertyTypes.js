@@ -121,4 +121,40 @@ class DocPropertyTypes {
          '@tutorial': '@tutorial',
          '@version': '@version',
      }
+
+    /**
+     *
+     * @return {{"@public": string, "@package": string, "@protected": string, "@private": string}}
+     */
+     static get access() {
+         return {
+             '@private': 'private',
+             '@protected': 'protected',
+             '@public': 'public',
+             '@package': 'package',
+         }
+     }
+
+     static get kind() {
+         return {
+             '@function': 'function',
+             '@method': 'function',
+             '@enum': 'enum',
+             '@const': 'constant',
+             '@constant': 'constant',
+             '@class': 'class',
+             '@constructor': 'class',
+             '@prop': 'property',
+             '@property': 'property',
+             '@event': 'event',
+             '@namespace': 'namespace',
+             '@external': 'external',
+             '@mixin': 'mixin',
+             '@module': 'module',
+             '@package': 'package',
+             '@typedef': 'typedef',
+         }
+     }
 }
+
+module.exports = DocPropertyTypes;
