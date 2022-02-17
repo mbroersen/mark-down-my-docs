@@ -47,7 +47,7 @@ class DocBlock {
 
     /**
      *
-     * @return {DocDescription}
+     * @return {*|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: *[], example: null}}
      */
     describe() {
         return new DocDescription(this).describe();
