@@ -56,6 +56,7 @@ class DocBlock {
         let access = 'public';
         let example = null;
         let description = null;
+        let returns = null;
 
         for (const property of this.properties()) {
             if (Object.values(DocPropertyTypes.access).includes(property.name)) {
@@ -73,6 +74,10 @@ class DocBlock {
             if (property.name === 'description') {
                 description = property.content;
             }
+
+            if (property.name === 'return') {
+                returns = property.content;
+            }
         }
 
         //todo cleanup
@@ -83,7 +88,7 @@ class DocBlock {
             kind: match.groups?.kind ?? kind,
             is_generator: !!match.groups?.is_generator,
             is_static: !!match.groups?.is_static,
-            returns: match.groups?.returns,
+            returns: match.groups?.returns ?? returns,
             example,
             description,
             params: (match.groups?.params ?? '')
