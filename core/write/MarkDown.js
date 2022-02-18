@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const TemplateReader = require('../read/Template');
+const TemplateParser = require('../parse/Template');
 
 /**
  * @class {MarkDown}
@@ -118,14 +120,11 @@ class MarkDown {
         }
 
         console.info(this.docsPath, name);
-        this.writeHeader(fileSource, name)
+        const parser = new TemplateParser(new TemplateReader());
 
         for (const docBlock of fileSource.read()) {
             this.parseOwner(docBlock.owner, name, fileSource);
-
-            for (const property of docBlock.properties()) {
-                this.parseProperty(property);
-            }
+            this.writePart(parser.parse(docBlock));
         }
 
         this.writeIndexPart(fileSource, name);

@@ -1,0 +1,61 @@
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>{{name}}</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{access}}</td>
+            <td>{{kind}}</td>
+            <td>{{static}}</td>
+            <td>{{async}}</td>
+        </tr>
+        <tr>
+            <td>{{since}}</td>
+            <td>{{deprecated}}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr v-for="param in params">
+            <td>{{param}}</td>
+            <td>{{param_data_type}}</td>
+            <td>{{param_name}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Todo</td>
+            <td colSpan="3">{{todo}}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td colSpan="3">
+                {{description}}
+            </td>
+        </tr>
+        <tr>
+            <td>See</td>
+            <td colSpan="3" content="md">{{see}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>{{licence}}</td>
+        <td>{{copyright}}</td>
+        <td>{{author}}</td>
+        <td>{{version}}</td>
+    </tr>
+    <tr>
+        <td colSpan="4">
+            <a :href="source_link">
+                source code
+            </a>
+        </td>
+    </tr>
+    </tfoot>
+</table>
+
+### example
+{{example}}
