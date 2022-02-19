@@ -11,27 +11,27 @@ class Template {
         this.templateContent = this.templateReader.read();
     }
 
-
     /**
      *
      * @param {DocBlock} docBlock
+     * @param {string} sourceCodePath
      */
-    parse(docBlock) {
+    parse(docBlock, sourceCodePath) {
         let parsableContent = this.templateContent;
         const properties = docBlock.describe();
+        properties['source_code'] = sourceCodePath;
 
         parsableContent = this.parseVIf(parsableContent, properties);
 
         for (const [propertyName, propertyValue] of Object.entries(properties)) {
-
             if (Array.isArray(propertyValue)) {
                 parsableContent = this.parseVFor(parsableContent, propertyName, propertyValue);
                 continue;
             }
             parsableContent = this.parseContentProperty(parsableContent, propertyName, propertyValue);
         }
+
         parsableContent = this.cleanUnusedProperties(parsableContent);
-        //parsableContent = this.cleanEmptyLines(parsableContent);
         return parsableContent;
     }
 
@@ -43,15 +43,6 @@ class Template {
     cleanUnusedProperties(content) {
         return content.replace(/(^\s*)?{{[^}]+}}( *)?($\n^)?/gm, '');
     }
-    //
-    // /**
-    //  *
-    //  * @param content
-    //  * @return string
-    //  */
-    // cleanEmptyLines(content) {
-    //     return content.replace(/(\s+$\n){2,}/gm, '');
-    // }
 
     /**
      *
@@ -107,18 +98,20 @@ class Template {
     }
 
     parseVIf(content, properties) {
-        const vIfBlocks = content.matchAll(/^(.*)?(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!<\/\k<html_element>>)^.*$\n)*)|(.*)))?((\n^)?\<\/\k<html_element>\>)/gm)
+        const vIfBlocks = content.matchAll(/^(.*)(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!( *)?<\/\k<html_element>>$\n)^.*$\n)*)|(.*)))( *)?<\/\k<html_element>\>$\n/gm)
 
         for (const vIfBlock of vIfBlocks) {
-            if (!properties[vIfBlock.groups.statement]) {
-                content = content.replace(/^(.*)?(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!<\/\k<html_element>>)^.*$\n)*)|(.*)))?((\n^)?\<\/\k<html_element>\>)/gm, '');
+            if (Array.isArray(properties[vIfBlock.groups.statement]) && properties[vIfBlock.groups.statement].length === 0) {
+                content = content.replace(/^(.*)(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!( *)?<\/\k<html_element>>$\n)^.*$\n)*)|(.*)))( *)?<\/\k<html_element>\>$\n/gm, '');
+                continue;
+            }
+
+            if (Array.isArray(properties[vIfBlock.groups.statement]) && !properties[vIfBlock.groups.statement]) {
+                content = content.replace(/^(.*)(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!( *)?<\/\k<html_element>>$\n)^.*$\n)*)|(.*)))( *)?<\/\k<html_element>\>$\n/gm, '');
             }
         }
         return content;
     }
-
-
-
 }
 
 module.exports = Template;

@@ -31,6 +31,10 @@ class MarkDown {
         }
     }
 
+    sourcePathFromDocs(name, source) {
+        return path.relative(`${this.docsPath}${path.parse(name).dir}`, source.path);
+    }
+
     /**
      * @description Removes documentation file
      *
@@ -67,7 +71,7 @@ class MarkDown {
      */
     parseOwner(owner, name, source) {
         if (owner.startsWith('class')) {
-            this.writePart(`\n# ${owner} [#source](${path.relative(`${this.docsPath}${path.parse(name).dir}`, source.path)})\n`);
+            this.writePart(`\n# ${owner} \n`);
         } else {
             this.writePart(`\n## ${owner}\n\n`);
         }
@@ -124,7 +128,7 @@ class MarkDown {
 
         for (const docBlock of fileSource.read()) {
             this.parseOwner(docBlock.owner, name, fileSource);
-            this.writePart(parser.parse(docBlock));
+            this.writePart(parser.parse(docBlock, this.sourcePathFromDocs(name, fileSource)));
         }
 
         this.writeIndexPart(fileSource, name);

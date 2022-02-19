@@ -19,17 +19,22 @@
             <td></td>
             <td></td>
         </tr>
+        <tr v-if="params">
+            <td colSpan="4">
+                <h5>params</h5>
+            </td>
+        </tr>
         <tr v-for="param in params">
             <td>{{param}}</td>
             <td>{{param_data_type}}</td>
             <td>{{param_name}}</td>
             <td></td>
         </tr>
-        <tr>
+        <tr v-if="todo">
             <td>Todo</td>
             <td colSpan="3">{{todo}}</td>
         </tr>
-        <tr>
+        <tr v-if="description">
             <td>Description</td>
             <td colSpan="3">
                 {{description}}
@@ -47,15 +52,11 @@
         <td>{{author}}</td>
         <td>{{version}}</td>
     </tr>
-    <tr>
-        <td colSpan="4">
-            <a :href="source_link">
-                source code
-            </a>
-        </td>
-    </tr>
     </tfoot>
 </table>
 
-### example
+[source_code]({{source_code}})
+
+<h3 v-if="example">example</h3>
 {{example}}
+
