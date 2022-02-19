@@ -4,8 +4,8 @@
  *
  * @example
  * ```js
- * const doc = new Documentation(reader, writer);
- * doc->write();
+ * const docs = new Documentation(reader, writer);
+ * docs.write();
  * ```
  */
 class Documentation {
