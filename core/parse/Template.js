@@ -20,10 +20,9 @@ class Template {
         let parsableContent = this.templateContent;
         const properties = docBlock.describe();
 
-        //console.log(properties);
+        parsableContent = this.parseVIf(parsableContent, properties);
 
         for (const [propertyName, propertyValue] of Object.entries(properties)) {
-            console.log(propertyName, propertyValue)
 
             if (Array.isArray(propertyValue)) {
                 parsableContent = this.parseVFor(parsableContent, propertyName, propertyValue);
@@ -32,34 +31,55 @@ class Template {
             parsableContent = this.parseContentProperty(parsableContent, propertyName, propertyValue);
         }
         parsableContent = this.cleanUnusedProperties(parsableContent);
-        parsableContent = this.cleanEmptyLines(parsableContent);
+        //parsableContent = this.cleanEmptyLines(parsableContent);
         return parsableContent;
     }
 
+    /**
+     *
+     * @param content
+     * @return string
+     */
     cleanUnusedProperties(content) {
-        return content.replace(/( *)?{{[^}]+}}($\n)?/gm, '');
+        return content.replace(/(^\s*)?{{[^}]+}}( *)?($\n^)?/gm, '');
     }
+    //
+    // /**
+    //  *
+    //  * @param content
+    //  * @return string
+    //  */
+    // cleanEmptyLines(content) {
+    //     return content.replace(/(\s+$\n){2,}/gm, '');
+    // }
 
-    cleanEmptyLines(content) {
-        return content.replace(/^[\s\n]*$\n/gm, '');
-    }
-
+    /**
+     *
+     * @param content
+     * @param name
+     * @param value
+     * @return string
+     */
     parseContentProperty(content, name, value) {
-        return content.replace(`{{${name}}}`, value ?? '');
+        if ((value ?? '').length === 0) {
+            return content;
+        }
+        return content.replace(`{{${name}}}`, value);
     }
 
-
+    /**
+     *
+     * @param content
+     * @param name
+     * @param values
+     * @return string
+     */
     parseVFor(content, name, values) {
-        const regEx = `\\<(?<html_element>[^ ]+) (?<for_loop>v\\-for\\=\\"(?<loop_property>([^ ]*)) in (params))\\"\\>$\n(?<template>((?!( *\\<\\/\\k<html_element>))^(.*)$\n)+)^( *<\\/\\k<html_element>>)$\n`;
-        const search = new RegExp(regEx, 'mg');
-
-        //const vForBlocks = content.matchAll(/\<(?<html_element>[^ ]+) (?<for_loop>v\-for\=\"(?<loop_property>([^ ]*)) in (params))\"\>$\n(?<template>((?!( *\<\/\k<html_element>))^(.*)$\n)+)^( *<\/\k<html_element>>)/gm);
-        const vForBlocks = content.matchAll(search);
-
+        const vForExpression = `\\<(?<html_element>[^ ]+) (?<for_loop>v\\-for\\=\\"(?<loop_property>([^ ]*)) in (params))\\"\\>$\n(?<template>((?!( *\\<\\/\\k<html_element>))^(.*)$\n)+)^( *<\\/\\k<html_element>>)$\n`;
+        const vForRegEx = new RegExp(vForExpression, 'mg');
+        const vForBlocks = content.matchAll(vForRegEx);
 
         for (const match of vForBlocks) {
-            console.log(match);
-
             const htmlElement = match?.groups.html_element;
             const vForTemplate = match?.groups?.template;
             let vForContentResult = '';
@@ -67,17 +87,34 @@ class Template {
             for (const propertyValue of values) {
                 vForContentResult += `<${htmlElement}>` + this.parseContentProperty(vForTemplate, propertyName, propertyValue) + `</${htmlElement}>`;
             }
-            //content = content.replace(/\<(?<html_element>[^ ]+) (?<for_loop>v\-for\=\"(?<loop_property>([^ ]*)) in (params))\"\>$\n(?<template>((?!( *\<\/\k<html_element>))^(.*)$\n)+)^( *<\/\k<html_element>>)/gm, vForContentResult);
-            content = content.replace(search, vForContentResult);
+
+            content = content.replace(vForRegEx, vForContentResult);
         }
 
         return content;
     }
 
+    /**
+     * @todo create regex
+     * @param content
+     * @param bindingName
+     * @param bindingValue
+     */
     parseBindingProperty(content, bindingName, bindingValue) {
 
 
         content.replace()
+    }
+
+    parseVIf(content, properties) {
+        const vIfBlocks = content.matchAll(/^(.*)?(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!<\/\k<html_element>>)^.*$\n)*)|(.*)))?((\n^)?\<\/\k<html_element>\>)/gm)
+
+        for (const vIfBlock of vIfBlocks) {
+            if (!properties[vIfBlock.groups.statement]) {
+                content = content.replace(/^(.*)?(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!<\/\k<html_element>>)^.*$\n)*)|(.*)))?((\n^)?\<\/\k<html_element>\>)/gm, '');
+            }
+        }
+        return content;
     }
 
 
