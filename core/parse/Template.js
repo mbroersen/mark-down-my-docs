@@ -98,16 +98,21 @@ class Template {
     }
 
     parseVIf(content, properties) {
-        const vIfBlocks = content.matchAll(/^(.*)(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!( *)?<\/\k<html_element>>$\n)^.*$\n)*)|(.*)))( *)?<\/\k<html_element>\>$\n/gm)
+        const vIfBlocks = content.matchAll(/( *)?(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!( *)?<\/\k<html_element>>$\n)^.*$\n)*)|(.*)))( *)?<\/\k<html_element>\>($\n)?/gm)
 
         for (const vIfBlock of vIfBlocks) {
-            if (Array.isArray(properties[vIfBlock.groups.statement]) && properties[vIfBlock.groups.statement].length === 0) {
-                content = content.replace(/^(.*)(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!( *)?<\/\k<html_element>>$\n)^.*$\n)*)|(.*)))( *)?<\/\k<html_element>\>$\n/gm, '');
+            if (!properties.hasOwnProperty(vIfBlock.groups?.statement)) {
+                content = content.replace(vIfBlock[0], '');
                 continue;
             }
 
-            if (Array.isArray(properties[vIfBlock.groups.statement]) && !properties[vIfBlock.groups.statement]) {
-                content = content.replace(/^(.*)(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!( *)?<\/\k<html_element>>$\n)^.*$\n)*)|(.*)))( *)?<\/\k<html_element>\>$\n/gm, '');
+            if (Array.isArray(properties[vIfBlock.groups.statement]) && properties[vIfBlock.groups.statement].length === 0) {
+                content = content.replace(vIfBlock[0], '');
+                continue;
+            }
+
+            if (!Array.isArray(properties[vIfBlock.groups.statement]) && !properties[vIfBlock.groups.statement]) {
+                content = content.replace(vIfBlock[0], '');
             }
         }
         return content;

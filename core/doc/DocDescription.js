@@ -27,6 +27,7 @@ class DocDescription {
             params: [],
             returns: null,
             see: null,
+            todo: null,
         }
     }
 
@@ -69,10 +70,20 @@ class DocDescription {
 
     /**
      *
+     * @todo clean up code for creating
+     *
      * @return {*|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: *[], example: null}}
      */
     describe() {
         const match = this.ownerParts;
+
+        if (match.groups?.is_static) {
+            this.data.is_static = true;
+        }
+
+        if (match.groups?.is_generator) {
+            this.data.is_generator = true;
+        }
 
         if (match.groups?.kind) {
             this.data.kind = match.groups?.kind;

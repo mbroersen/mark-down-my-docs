@@ -10,13 +10,13 @@
         <tr>
             <td>{{access}}</td>
             <td>{{kind}}</td>
-            <td>{{static}}</td>
-            <td>{{async}}</td>
+            <td><span v-if="is_static">Static</span></td>
+            <td><span v-if="async">ASync</span></td>
         </tr>
         <tr>
             <td>{{since}}</td>
-            <td>{{deprecated}}</td>
-            <td></td>
+            <td><span v-if="deprecated"><b>Deprecated</b></span></td>
+            <td><span v-if="is_generator">Generator</span></td>
             <td></td>
         </tr>
         <tr v-if="params">
@@ -40,13 +40,13 @@
                 {{description}}
             </td>
         </tr>
-        <tr>
+        <tr v-if="see">
             <td>See</td>
             <td colSpan="3" content="md">{{see}}</td>
         </tr>
     </tbody>
     <tfoot>
-    <tr>
+    <tr v-if="author">
         <td>{{licence}}</td>
         <td>{{copyright}}</td>
         <td>{{author}}</td>
