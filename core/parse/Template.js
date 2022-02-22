@@ -1,4 +1,7 @@
 const TemplateReader = require('../read/Template');
+const IfSyntax = require('./syntax/If');
+const ForSyntax = require('./syntax/For');
+const ContentPropertySyntax = require('./syntax/ContentProperty');
 
 class Template {
 
@@ -14,12 +17,13 @@ class Template {
     /**
      *
      * @param {DocBlock} docBlock
-     * @param {string} sourceCodePath
+     * @param {sourceCodePath: string, indexPath: string} sourceCodePath
      */
-    parse(docBlock, sourceCodePath) {
+    parse(docBlock, paths) {
         let parsableContent = this.templateContent;
         const properties = docBlock.describe();
-        properties['source_code'] = sourceCodePath;
+        properties['source_code'] = paths.sourceCodePath;
+        properties['index_path'] = paths.indexPath;
 
         parsableContent = this.parseVIf(parsableContent, properties);
 
@@ -52,10 +56,7 @@ class Template {
      * @return string
      */
     parseContentProperty(content, name, value) {
-        if ((value ?? '').length === 0) {
-            return content;
-        }
-        return content.replace(`{{${name}}}`, value);
+        return new ContentPropertySyntax().parse(content, name, value);
     }
 
     /**
@@ -66,20 +67,13 @@ class Template {
      * @return string
      */
     parseVFor(content, name, values) {
-        const vForExpression = `\\<(?<html_element>[^ ]+) (?<for_loop>v\\-for\\=\\"(?<loop_property>([^ ]*)) in (params))\\"\\>$\n(?<template>((?!( *\\<\\/\\k<html_element>))^(.*)$\n)+)^( *<\\/\\k<html_element>>)$\n`;
-        const vForRegEx = new RegExp(vForExpression, 'mg');
+
+        const vForRegEx = ForSyntax.expression(name);
         const vForBlocks = content.matchAll(vForRegEx);
 
         for (const match of vForBlocks) {
-            const htmlElement = match?.groups.html_element;
-            const vForTemplate = match?.groups?.template;
-            let vForContentResult = '';
-            let propertyName = match?.groups?.loop_property;
-            for (const propertyValue of values) {
-                vForContentResult += `<${htmlElement}>` + this.parseContentProperty(vForTemplate, propertyName, propertyValue) + `</${htmlElement}>`;
-            }
-
-            content = content.replace(vForRegEx, vForContentResult);
+            const forSyntax = new ForSyntax(match?.groups?.template, match.groups);
+            content = forSyntax.parse(content, values, name);
         }
 
         return content;
@@ -97,24 +91,20 @@ class Template {
         content.replace()
     }
 
+    /**
+     *
+     * @param content
+     * @param properties
+     * @return {string}
+     */
     parseVIf(content, properties) {
         const vIfBlocks = content.matchAll(/( *)?(<(?<html_element>[^ ]+)([^>]*?)(v-if=")(?<statement>[^"]+)"([^>]*)?>)($\n)?(?<if_content>((((?!( *)?<\/\k<html_element>>$\n)^.*$\n)*)|(.*)))( *)?<\/\k<html_element>\>($\n)?/gm)
 
         for (const vIfBlock of vIfBlocks) {
-            if (!properties.hasOwnProperty(vIfBlock.groups?.statement)) {
-                content = content.replace(vIfBlock[0], '');
-                continue;
-            }
-
-            if (Array.isArray(properties[vIfBlock.groups.statement]) && properties[vIfBlock.groups.statement].length === 0) {
-                content = content.replace(vIfBlock[0], '');
-                continue;
-            }
-
-            if (!Array.isArray(properties[vIfBlock.groups.statement]) && !properties[vIfBlock.groups.statement]) {
-                content = content.replace(vIfBlock[0], '');
-            }
+            const ifSyntax = new IfSyntax(vIfBlock[0], vIfBlock.groups?.statement);
+            content = ifSyntax.parse(content, properties);
         }
+
         return content;
     }
 }

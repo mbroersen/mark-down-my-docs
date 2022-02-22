@@ -31,8 +31,23 @@ class MarkDown {
         }
     }
 
+    /**
+     *
+     * @param name
+     * @param source
+     * @return {string}
+     */
     sourcePathFromDocs(name, source) {
         return path.relative(`${this.docsPath}${path.parse(name).dir}`, source.path);
+    }
+
+    /**
+     *
+     * @param name
+     * @return {string}
+     */
+    indexPathFromDocs(name) {
+        return path.relative(`${this.docsPath}${path.parse(name).dir}`, `${this.docsPath}${path.sep}Index.md`)
     }
 
     /**
@@ -78,36 +93,6 @@ class MarkDown {
     }
 
     /**
-     * @description handle js-doc tags
-     *
-     * @param {DocProperty} property
-     */
-    parseProperty(property) {
-        this.writePart(`\n\n### ${property.name.replace(/\s\*\s/, '')} `);
-
-        if (property.hasContent) {
-            const content = property.content;
-
-            if (content.match(/```/)) {
-                this.writePart(`\n`);
-            }
-
-            this.parsePropertyContent(content);
-        }
-
-        this.writePart(`\n`);
-    }
-
-    /**
-     * @description write content of js-doc tag
-     *
-     * @param {string} content
-     */
-    parsePropertyContent(content) {
-        this.writePart(content.replace(/^{{?(.*)}?}(.*)$/gm, "$2\n> ```ts\n> $1\n> ```\n\n"));
-    }
-
-    /**
      * @description start writing markdown
      *
      * @param {Source} fileSource
@@ -127,8 +112,12 @@ class MarkDown {
         const parser = new TemplateParser(new TemplateReader());
 
         for (const docBlock of fileSource.read()) {
+            this.createDirectory(fileSource);
             this.parseOwner(docBlock.owner, name, fileSource);
-            this.writePart(parser.parse(docBlock, this.sourcePathFromDocs(name, fileSource)));
+            this.writePart(parser.parse(docBlock, {
+                sourceCodePath: this.sourcePathFromDocs(name, fileSource),
+                indexPath: this.indexPathFromDocs(name),
+            }));
         }
 
         this.writeIndexPart(fileSource, name);
@@ -171,19 +160,6 @@ class MarkDown {
      */
     writeFile(name) {
         fs.writeFileSync(`${this.docsPath}${name}.md`, this.content, {flag: 'a'});
-    }
-
-    /**
-     * @description write a header to go back to index
-     *
-     * @param {Source} fileSource
-     * @param {string} name
-     */
-    writeHeader(fileSource, name) {
-        this.createDirectory(fileSource);
-        const indexPath = path.relative(`${this.docsPath}${path.parse(name).dir}`, `${this.docsPath}${path.sep}Index.md`);
-        let header = `[Go back to index](${indexPath})\n\n---\n`;
-        this.writePart(header);
     }
 
     /**

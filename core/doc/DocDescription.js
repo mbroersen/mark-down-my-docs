@@ -28,6 +28,7 @@ class DocDescription {
             returns: null,
             see: null,
             todo: null,
+            return: null,
         }
     }
 

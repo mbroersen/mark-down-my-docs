@@ -1,3 +1,5 @@
+[Go back to index]({{index_path}})
+---
 <table>
     <thead>
         <tr>
@@ -21,14 +23,22 @@
         </tr>
         <tr v-if="params">
             <td colSpan="4">
-                <h5>params</h5>
+                <h4>params</h4>
             </td>
         </tr>
         <tr v-for="param in params">
-            <td>{{param}}</td>
-            <td>{{param_data_type}}</td>
-            <td>{{param_name}}</td>
-            <td></td>
+            <td colspan="2"><b>{{param}}</b></td>
+            <td colspan="2"><code>{{param_name}}</code></td>
+        </tr>
+        <tr v-if="return">
+            <td colSpan="4">
+                <h4>returns</h4>
+            </td>
+        </tr>
+        <tr v-if="return">
+            <td colSpan="4">
+                <h4><pre>{{return}}</pre></h4>
+            </td>
         </tr>
         <tr v-if="todo">
             <td>Todo</td>
@@ -42,7 +52,7 @@
         </tr>
         <tr v-if="see">
             <td>See</td>
-            <td colSpan="3" content="md">{{see}}</td>
+            <td colSpan="3" content="md"><a href="{{see}}">{{see}}</a></td>
         </tr>
     </tbody>
     <tfoot>
