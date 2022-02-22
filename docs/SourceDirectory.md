@@ -37,14 +37,13 @@
 [source_code](../core/SourceDirectory.js)
 
 <h3 v-if="example">example</h3>
+
  ```js
   const sourceDirectory = new SourceDirectory('./core');
  
   // Outputs Sources in generator
   for (const source of sourceDirectory.read()) {
   // instance of Source
-  hello &gt; test;
- 
   source.read() // get content
   }
  
