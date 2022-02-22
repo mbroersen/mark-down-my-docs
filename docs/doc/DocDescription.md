@@ -109,7 +109,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{RegExpMatchArray}</pre></h4>
+                <h4><code>{RegExpMatchArray}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -225,7 +225,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: [], example: null}}</pre></h4>
+                <h4><code>{|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: [], example: null}}</code></h4>
             </td>
         </tr>
         <tr v-if="todo">

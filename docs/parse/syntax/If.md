@@ -96,7 +96,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{RegExp}</pre></h4>
+                <h4><code>{RegExp}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -148,7 +148,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{string}</pre></h4>
+                <h4><code>{string}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -198,7 +198,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{string}</pre></h4>
+                <h4><code>{string}</code></h4>
             </td>
         </tr>
     </tbody>

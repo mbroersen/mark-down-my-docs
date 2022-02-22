@@ -232,7 +232,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre></pre></h4>
+                <h4><code></code></h4>
             </td>
         </tr>
     </tbody>

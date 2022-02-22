@@ -122,7 +122,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{Generator&lt;Source, void, any&gt;}</pre></h4>
+                <h4><code>{Generator&lt;Source, void, any&gt;}</code></h4>
             </td>
         </tr>
         <tr v-if="description">
@@ -178,7 +178,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{Generator&lt;string|any, void, any&gt;}</pre></h4>
+                <h4><code>{Generator&lt;string|any, void, any&gt;}</code></h4>
             </td>
         </tr>
         <tr v-if="description">

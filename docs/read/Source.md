@@ -120,7 +120,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{string}</pre></h4>
+                <h4><code>{string}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -163,7 +163,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{string}</pre></h4>
+                <h4><code>{string}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -213,7 +213,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{IterableIterator&lt;RegExpMatchArray&gt;}</pre></h4>
+                <h4><code>{IterableIterator&lt;RegExpMatchArray&gt;}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -256,7 +256,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{RegExpMatchArray|false}</pre></h4>
+                <h4><code>{RegExpMatchArray|false}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -299,7 +299,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{string}</pre></h4>
+                <h4><code>{string}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -342,7 +342,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{Generator&lt;DocBlock, void, any&gt;}</pre></h4>
+                <h4><code>{Generator&lt;DocBlock, void, any&gt;}</code></h4>
             </td>
         </tr>
         <tr v-if="description">

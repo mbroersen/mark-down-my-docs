@@ -107,7 +107,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{string}</pre></h4>
+                <h4><code>{string}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -150,7 +150,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{string}</pre></h4>
+                <h4><code>{string}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -193,7 +193,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{string | undefined}</pre></h4>
+                <h4><code>{string | undefined}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -236,7 +236,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: [], example: null}}</pre></h4>
+                <h4><code>{|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: [], example: null}}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -279,7 +279,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{Generator&lt;DocProperty, void, any&gt;}</pre></h4>
+                <h4><code>{Generator&lt;DocProperty, void, any&gt;}</code></h4>
             </td>
         </tr>
     </tbody>
@@ -322,7 +322,7 @@
         </tr>
         <tr v-if="return">
             <td colSpan="4">
-                <h4><pre>{IterableIterator&lt;RegExpMatchArray&gt;}</pre></h4>
+                <h4><code>{IterableIterator&lt;RegExpMatchArray&gt;}</code></h4>
             </td>
         </tr>
     </tbody>
