@@ -1,81 +1,244 @@
+
+# class DocPropertyTypes 
 [Go back to index](../Index.md)
-
 ---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>DocPropertyTypes</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>enum</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+                <tr v-if="see">
+            <td>See</td>
+            <td colSpan="3" content="md"><a href="`https://jsdoc.app/`"></a></td>
+        </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
-# class DocPropertyTypes [#source](../../core/doc/DocPropertyTypes.js)
+[source_code](../../core/doc/DocPropertyTypes.js)
 
-
-### enum 
-
-
-### see `https://jsdoc.app/`
 
 ## #access
 
+[Go back to index](../Index.md)
+---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>access</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>property</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
-
-### readonly 
-
-
-### type 
-> ```ts
-> "@public": string, "@package": string, "@protected": string, "@private": string}
-> ```
-
+[source_code](../../core/doc/DocPropertyTypes.js)
 
 
 ## #kind
 
+[Go back to index](../Index.md)
+---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>kind</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>property</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
-
-### readonly 
-
-
-### type 
-> ```ts
-> "@class": string, "@namespace": string, "@constructor": string, "@event": string, "@mixin": string, "@constant": string, "@function": string, "@enum": string, "@method": string, "@module": string, "@package": string, "@prop": string, "@typedef": string, "@property": string, "@const": string, "@external": string}
-> ```
-
+[source_code](../../core/doc/DocPropertyTypes.js)
 
 
 ## #descriptors
 
+[Go back to index](../Index.md)
+---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>descriptors</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>property</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
-
-### readonly 
-
-
-### type 
-> ```ts
-> "@readonly": string, "@deprecated": string, "@static": string, "@global": string, "@generator": string, "@abstract": string, "@ignore": string, "@virtual": string, "@async": string}
-> ```
-
+[source_code](../../core/doc/DocPropertyTypes.js)
 
 
 ## #values
 
+[Go back to index](../Index.md)
+---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>values</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>property</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
-
-### readonly 
-
-
-### type 
-> ```ts
-> "@requires": string, "@param": string, "@classdesc": string, "@type": string, "@yields": string, "@returns": string, "@arg": string, "@file": string, "@member": string, "@borrows": string, "@hideconstructor": string, "@access": string, "@callback": string, "@inheritdoc": string, "@memberof": string, "@augments": string, "@default": string, "@constructs": string, "@extends": string, "@this": string, "@exception": string, "@argument": string, "@inner": string, "@instance": string, "@interface": string, "@variation": string, "@kind": string, "@implements": string, "@mixes": string, "@return": string, "@alias": string, "@listens": string, "@name": string, "@lends": string, "@summary": string, "@emits": string, "@fires": string, "@var": string, "@exports": string, "@throws": string, "@override": string}
-> ```
-
+[source_code](../../core/doc/DocPropertyTypes.js)
 
 
 ## #writings
 
+[Go back to index](../Index.md)
+---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>writings</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>property</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+            </tbody>
+    <tfoot>
+    </tfoot>
+</table>
+
+[source_code](../../core/doc/DocPropertyTypes.js)
 
 
-### readonly 
+## static get access()
 
+[Go back to index](../Index.md)
+---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>access</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>method</td>
+            <td><span v-if="is_static">Static</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+                <tr v-if="return">
+            <td colSpan="4">
+                <h4>returns</h4>
+            </td>
+        </tr>
+        <tr v-if="return">
+            <td colSpan="4">
+                <h4><pre></pre></h4>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
-### type 
-> ```ts
-> "@author": string, "@description": string, "@copyright": string, "@since": string, "@version": string, "@example": string, "@license": string, "@todo": string, "@see": string, "@tutorial": string}
-> ```
-
+[source_code](../../core/doc/DocPropertyTypes.js)
 

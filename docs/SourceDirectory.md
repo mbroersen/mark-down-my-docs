@@ -1,66 +1,197 @@
+
+# class SourceDirectory 
 [Go back to index](Index.md)
-
 ---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>SourceDirectory</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>class</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+                <tr v-if="description">
+            <td>Description</td>
+            <td colSpan="3">
+                Reads contents of source directory with javascript or typescript files
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
-# class SourceDirectory [#source](../core/SourceDirectory.js)
+[source_code](../core/SourceDirectory.js)
 
-
-### class 
-> ```ts
-> SourceDirectory
-> ```
-
-
-
-
-### description Reads contents of source directory with javascript or typescript files
-
-
-### example 
+<h3 v-if="example">example</h3>
  ```js
   const sourceDirectory = new SourceDirectory('./core');
  
   // Outputs Sources in generator
   for (const source of sourceDirectory.read()) {
   // instance of Source
+  hello &gt; test;
+ 
   source.read() // get content
   }
  
   ```
 
+
 ## constructor(path)
 
+[Go back to index](Index.md)
+---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>constructor</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>method</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr v-if="params">
+            <td colSpan="4">
+                <h4>params</h4>
+            </td>
+        </tr>
+        <tr>            <td colspan="2"><b>path</b></td>
+            <td colspan="2"><code></code></td>
+</tr>    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
+[source_code](../core/SourceDirectory.js)
 
-### param path
 
 ## * read()
 
+[Go back to index](Index.md)
+---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>read</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>method</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><span v-if="is_generator">Generator</span></td>
+            <td></td>
+        </tr>
+                <tr v-if="return">
+            <td colSpan="4">
+                <h4>returns</h4>
+            </td>
+        </tr>
+        <tr v-if="return">
+            <td colSpan="4">
+                <h4><pre>{Generator&lt;Source, void, any&gt;}</pre></h4>
+            </td>
+        </tr>
+        <tr v-if="description">
+            <td>Description</td>
+            <td colSpan="3">
+                will output list of Source for each file in directory or subdirectory
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
-
-### description will output list of Source for each file in directory or subdirectory
-
-
-### return 
-> ```ts
-> Generator<Source, void, any>
-> ```
-
+[source_code](../core/SourceDirectory.js)
 
 
 ## * scanDirectory(srcPath)
 
+[Go back to index](Index.md)
+---
+<table>
+    <thead>
+        <tr>
+            <th colSpan="4">
+                <pre><code>scanDirectory</code></pre>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>public</td>
+            <td>method</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><span v-if="is_generator">Generator</span></td>
+            <td></td>
+        </tr>
+        <tr v-if="params">
+            <td colSpan="4">
+                <h4>params</h4>
+            </td>
+        </tr>
+        <tr>            <td colspan="2"><b>srcPath</b></td>
+            <td colspan="2"><code></code></td>
+</tr>        <tr v-if="return">
+            <td colSpan="4">
+                <h4>returns</h4>
+            </td>
+        </tr>
+        <tr v-if="return">
+            <td colSpan="4">
+                <h4><pre>{Generator&lt;string|any, void, any&gt;}</pre></h4>
+            </td>
+        </tr>
+        <tr v-if="description">
+            <td>Description</td>
+            <td colSpan="3">
+                will output list of path names for each file in directory or subdirectory
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
 
-
-### description will output list of path names for each file in directory or subdirectory
-
-
-### param srcPath
-
-
-### return 
-> ```ts
-> Generator<string|any, void, any>
-> ```
-
+[source_code](../core/SourceDirectory.js)
 
