@@ -37,6 +37,7 @@
 [source_code](../core/Documentation.js)
 
 <h3 v-if="example">example</h3>
+
  ```js
   const docs = new Documentation(reader, writer);
   docs.write();

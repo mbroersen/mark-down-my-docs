@@ -73,6 +73,7 @@
 [source_code](../../core/doc/DocProperty.js)
 
 <h3 v-if="example">example</h3>
+
 ```js
   const property = new DocProperty('description', 'hello world');
   property.name; // string
