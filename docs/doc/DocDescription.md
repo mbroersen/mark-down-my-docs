@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">DocDescription</h1>
+                <h4 v-if="!properties['deprecated']">DocDescription</h4>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
@@ -51,7 +51,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">constructor</h1>
+                <h4 v-if="!properties['deprecated']">constructor</h4>
             </th>
         </tr>
     </thead>
@@ -87,7 +87,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">ownerParts</h1>
+                <h4 v-if="!properties['deprecated']">ownerParts</h4>
             </th>
         </tr>
     </thead>
@@ -120,7 +120,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">describeFromProperties</h1>
+                <h4 v-if="!properties['deprecated']">describeFromProperties</h4>
             </th>
         </tr>
     </thead>
@@ -145,7 +145,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">describeParams</h1>
+                <h4 v-if="!properties['deprecated']">describeParams</h4>
             </th>
         </tr>
     </thead>
@@ -181,7 +181,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">describe</h1>
+                <h4 v-if="!properties['deprecated']">describe</h4>
             </th>
         </tr>
     </thead>

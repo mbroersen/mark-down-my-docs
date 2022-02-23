@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">If</h1>
+                <h4 v-if="!properties['deprecated']">If</h4>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
@@ -46,7 +46,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">constructor</h1>
+                <h4 v-if="!properties['deprecated']">constructor</h4>
             </th>
         </tr>
     </thead>
@@ -71,7 +71,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">matcher</h1>
+                <h4 v-if="!properties['deprecated']">matcher</h4>
             </th>
         </tr>
     </thead>
@@ -104,7 +104,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">parse</h1>
+                <h4 v-if="!properties['deprecated']">parse</h4>
             </th>
         </tr>
     </thead>
@@ -154,7 +154,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">removeBlockFromContent</h1>
+                <h4 v-if="!properties['deprecated']">removeBlockFromContent</h4>
             </th>
         </tr>
     </thead>

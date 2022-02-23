@@ -12,8 +12,8 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!!properties['deprecated']"><s>{{name}}</s> <small><small><sup>deprecated</sup></small></small></h1>
-                <h1 v-if="!properties['deprecated']">{{name}}</h1>
+                <h4 v-if="!!properties['deprecated']"><s>{{name}}</s> <small><small><sup>deprecated</sup></small></small></h4>
+                <h4 v-if="!properties['deprecated']">{{name}}</h4>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">

@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">MarkDown</h1>
+                <h4 v-if="!properties['deprecated']">MarkDown</h4>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
@@ -62,7 +62,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">constructor</h1>
+                <h4 v-if="!properties['deprecated']">constructor</h4>
             </th>
         </tr>
     </thead>
@@ -98,7 +98,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">sourcePathFromDocs</h1>
+                <h4 v-if="!properties['deprecated']">sourcePathFromDocs</h4>
             </th>
         </tr>
     </thead>
@@ -144,7 +144,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">indexPathFromDocs</h1>
+                <h4 v-if="!properties['deprecated']">indexPathFromDocs</h4>
             </th>
         </tr>
     </thead>
@@ -188,7 +188,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">clean</h1>
+                <h4 v-if="!properties['deprecated']">clean</h4>
             </th>
         </tr>
     </thead>
@@ -230,7 +230,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">createDirectory</h1>
+                <h4 v-if="!properties['deprecated']">createDirectory</h4>
             </th>
         </tr>
     </thead>
@@ -272,7 +272,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">parseOwner</h1>
+                <h4 v-if="!properties['deprecated']">parseOwner</h4>
             </th>
         </tr>
     </thead>
@@ -318,7 +318,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">write</h1>
+                <h4 v-if="!properties['deprecated']">write</h4>
             </th>
         </tr>
     </thead>
@@ -360,7 +360,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">nameByFileSource</h1>
+                <h4 v-if="!properties['deprecated']">nameByFileSource</h4>
             </th>
         </tr>
     </thead>
@@ -410,7 +410,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">writePart</h1>
+                <h4 v-if="!properties['deprecated']">writePart</h4>
             </th>
         </tr>
     </thead>
@@ -452,7 +452,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">writeFile</h1>
+                <h4 v-if="!properties['deprecated']">writeFile</h4>
             </th>
         </tr>
     </thead>
@@ -494,7 +494,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">writeIndexPart</h1>
+                <h4 v-if="!properties['deprecated']">writeIndexPart</h4>
             </th>
         </tr>
     </thead>

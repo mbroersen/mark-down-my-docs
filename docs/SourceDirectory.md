@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">SourceDirectory</h1>
+                <h4 v-if="!properties['deprecated']">SourceDirectory</h4>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
@@ -66,7 +66,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">constructor</h1>
+                <h4 v-if="!properties['deprecated']">constructor</h4>
             </th>
         </tr>
     </thead>
@@ -103,7 +103,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">read</h1>
+                <h4 v-if="!properties['deprecated']">read</h4>
             </th>
         </tr>
     </thead>
@@ -143,7 +143,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">scanDirectory</h1>
+                <h4 v-if="!properties['deprecated']">scanDirectory</h4>
             </th>
         </tr>
     </thead>

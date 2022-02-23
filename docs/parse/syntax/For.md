@@ -13,7 +13,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">parseContentProperty</h1>
+                <h4 v-if="!properties['deprecated']">parseContentProperty</h4>
             </th>
         </tr>
     </thead>

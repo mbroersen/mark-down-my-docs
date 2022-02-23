@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">DocPropertyTypes</h1>
+                <h4 v-if="!properties['deprecated']">DocPropertyTypes</h4>
             </th>
         </tr>
     </thead>
@@ -41,7 +41,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">access</h1>
+                <h4 v-if="!properties['deprecated']">access</h4>
             </th>
         </tr>
     </thead>
@@ -66,7 +66,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">kind</h1>
+                <h4 v-if="!properties['deprecated']">kind</h4>
             </th>
         </tr>
     </thead>
@@ -91,7 +91,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">descriptors</h1>
+                <h4 v-if="!properties['deprecated']">descriptors</h4>
             </th>
         </tr>
     </thead>
@@ -116,7 +116,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">values</h1>
+                <h4 v-if="!properties['deprecated']">values</h4>
             </th>
         </tr>
     </thead>
@@ -141,7 +141,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">writings</h1>
+                <h4 v-if="!properties['deprecated']">writings</h4>
             </th>
         </tr>
     </thead>
@@ -166,7 +166,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">access</h1>
+                <h4 v-if="!properties['deprecated']">access</h4>
             </th>
         </tr>
     </thead>

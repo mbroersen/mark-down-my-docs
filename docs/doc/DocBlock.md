@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!!properties['deprecated']"><s>DocBlock</s> <small><small><sup>deprecated</sup></small></small></h1>
+                <small v-if="!!properties['deprecated']"><s>DocBlock</s> <small><sup>deprecated</sup></small></h4>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
@@ -47,7 +47,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">constructor</h1>
+                <h4 v-if="!properties['deprecated']">constructor</h4>
             </th>
         </tr>
     </thead>
@@ -87,7 +87,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">inDocsPath</h1>
+                <h4 v-if="!properties['deprecated']">inDocsPath</h4>
             </th>
         </tr>
     </thead>
@@ -120,7 +120,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">owner</h1>
+                <h4 v-if="!properties['deprecated']">owner</h4>
             </th>
         </tr>
     </thead>
@@ -153,7 +153,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">ownerName</h1>
+                <h4 v-if="!properties['deprecated']">ownerName</h4>
             </th>
         </tr>
     </thead>
@@ -186,7 +186,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">describe</h1>
+                <h4 v-if="!properties['deprecated']">describe</h4>
             </th>
         </tr>
     </thead>
@@ -220,7 +220,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">properties</h1>
+                <h4 v-if="!properties['deprecated']">properties</h4>
             </th>
         </tr>
     </thead>
@@ -253,7 +253,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">propertiesInContent</h1>
+                <h4 v-if="!properties['deprecated']">propertiesInContent</h4>
             </th>
         </tr>
     </thead>

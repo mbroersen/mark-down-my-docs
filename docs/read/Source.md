@@ -12,7 +12,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">Source</h1>
+                <h4 v-if="!properties['deprecated']">Source</h4>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
@@ -64,7 +64,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">constructor</h1>
+                <h4 v-if="!properties['deprecated']">constructor</h4>
             </th>
         </tr>
     </thead>
@@ -100,7 +100,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">basename</h1>
+                <h4 v-if="!properties['deprecated']">basename</h4>
             </th>
         </tr>
     </thead>
@@ -133,7 +133,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">relativePath</h1>
+                <h4 v-if="!properties['deprecated']">relativePath</h4>
             </th>
         </tr>
     </thead>
@@ -166,7 +166,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">dockBlocksInContent</h1>
+                <h4 v-if="!properties['deprecated']">dockBlocksInContent</h4>
             </th>
         </tr>
     </thead>
@@ -210,7 +210,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">hasDockBlocks</h1>
+                <h4 v-if="!properties['deprecated']">hasDockBlocks</h4>
             </th>
         </tr>
     </thead>
@@ -243,7 +243,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">readFile</h1>
+                <h4 v-if="!properties['deprecated']">readFile</h4>
             </th>
         </tr>
     </thead>
@@ -277,7 +277,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">read</h1>
+                <h4 v-if="!properties['deprecated']">read</h4>
             </th>
         </tr>
     </thead>

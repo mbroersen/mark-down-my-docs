@@ -13,7 +13,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">constructor</h1>
+                <h4 v-if="!properties['deprecated']">constructor</h4>
             </th>
         </tr>
     </thead>
@@ -49,7 +49,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">parse</h1>
+                <h4 v-if="!properties['deprecated']">parse</h4>
             </th>
         </tr>
     </thead>
@@ -87,7 +87,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">cleanUnusedProperties</h1>
+                <h4 v-if="!properties['deprecated']">cleanUnusedProperties</h4>
             </th>
         </tr>
     </thead>
@@ -131,7 +131,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">parseContentProperty</h1>
+                <h4 v-if="!properties['deprecated']">parseContentProperty</h4>
             </th>
         </tr>
     </thead>
@@ -179,7 +179,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">parseVFor</h1>
+                <h4 v-if="!properties['deprecated']">parseVFor</h4>
             </th>
         </tr>
     </thead>
@@ -227,7 +227,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">parseBindingProperty</h1>
+                <h4 v-if="!properties['deprecated']">parseBindingProperty</h4>
             </th>
         </tr>
     </thead>
@@ -271,7 +271,7 @@
         </tr>
         <tr>
             <th colSpan="2">
-                <h1 v-if="!properties['deprecated']">parseVIf</h1>
+                <h4 v-if="!properties['deprecated']">parseVIf</h4>
             </th>
         </tr>
     </thead>
