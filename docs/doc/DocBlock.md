@@ -26,14 +26,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
-    <tbody>
-    </tbody>
-</table>
-
-<table>
     <tbody>
     </tbody>
     <tfoot>
@@ -59,9 +51,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <trs v-if="properties['params'].length > 0">
             <td>
@@ -78,11 +67,6 @@
 </tr>                </table>
             </td>
         </trs>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
@@ -107,9 +91,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <tr v-if="!!properties['return']">
             <td>
@@ -119,11 +100,6 @@
                 <pre><code>{string}</code></pre>
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
@@ -148,9 +124,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <tr v-if="!!properties['return']">
             <td>
@@ -160,11 +133,6 @@
                 <pre><code>{string}</code></pre>
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
@@ -189,9 +157,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <tr v-if="!!properties['return']">
             <td>
@@ -201,11 +166,6 @@
                 <pre><code>{string | undefined}</code></pre>
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
@@ -230,9 +190,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <tr v-if="!!properties['return']">
             <td>
@@ -242,11 +199,6 @@
                 <pre><code>{|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: [], example: null}}</code></pre>
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
@@ -272,9 +224,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <tr v-if="!!properties['return']">
             <td>
@@ -284,11 +233,6 @@
                 <pre><code>{Generator&lt;DocProperty, void, any&gt;}</code></pre>
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
@@ -313,9 +257,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <tr v-if="!!properties['return']">
             <td>
@@ -325,11 +266,6 @@
                 <pre><code>{IterableIterator&lt;RegExpMatchArray&gt;}</code></pre>
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>

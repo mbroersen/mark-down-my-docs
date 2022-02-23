@@ -16,14 +16,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
-    <tbody>
-    </tbody>
-</table>
-
-<table>
     <tbody>
         <tr v-if="!!properties['see']">
             <td>See</td>
@@ -53,14 +45,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
-    <tbody>
-    </tbody>
-</table>
-
-<table>
     <tbody>
     </tbody>
     <tfoot>
@@ -86,14 +70,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
-    <tbody>
-    </tbody>
-</table>
-
-<table>
     <tbody>
     </tbody>
     <tfoot>
@@ -119,14 +95,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
-    <tbody>
-    </tbody>
-</table>
-
-<table>
     <tbody>
     </tbody>
     <tfoot>
@@ -152,14 +120,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
-    <tbody>
-    </tbody>
-</table>
-
-<table>
     <tbody>
     </tbody>
     <tfoot>
@@ -185,14 +145,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
-    <tbody>
-    </tbody>
-</table>
-
-<table>
     <tbody>
     </tbody>
     <tfoot>
@@ -218,9 +170,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <tr v-if="!!properties['return']">
             <td>
@@ -230,11 +179,6 @@
                 <pre><code></code></pre>
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>

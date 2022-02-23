@@ -17,9 +17,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <trs v-if="properties['params'].length > 0">
             <td>
@@ -32,11 +29,6 @@
 </tr>                </table>
             </td>
         </trs>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
@@ -61,9 +53,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <trs v-if="properties['params'].length > 0">
             <td>
@@ -78,11 +67,6 @@
 </tr>                </table>
             </td>
         </trs>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
@@ -107,9 +91,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <trs v-if="properties['params'].length > 0">
             <td>
@@ -130,11 +111,6 @@
                 <pre><code>string</code></pre>
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
@@ -159,9 +135,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <trs v-if="properties['params'].length > 0">
             <td>
@@ -187,11 +160,6 @@
             </td>
         </tr>
     </tbody>
-</table>
-
-<table>
-    <tbody>
-    </tbody>
     <tfoot>
     </tfoot>
 </table>
@@ -215,9 +183,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <trs v-if="properties['params'].length > 0">
             <td>
@@ -243,11 +208,6 @@
             </td>
         </tr>
     </tbody>
-</table>
-
-<table>
-    <tbody>
-    </tbody>
     <tfoot>
     </tfoot>
 </table>
@@ -271,9 +231,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <trs v-if="properties['params'].length > 0">
             <td>
@@ -290,11 +247,6 @@
 </tr>                </table>
             </td>
         </trs>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
         <tr v-if="!!properties['todo']">
             <td>Todo</td>
             <td colSpan="3">create regex</td>
@@ -323,9 +275,6 @@
             </th>
         </tr>
     </thead>
-</table>
-
-<table>
     <tbody>
         <trs v-if="properties['params'].length > 0">
             <td>
@@ -348,11 +297,6 @@
                 <pre><code>{string}</code></pre>
             </td>
         </tr>
-    </tbody>
-</table>
-
-<table>
-    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
