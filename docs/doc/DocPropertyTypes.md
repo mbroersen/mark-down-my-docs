@@ -5,8 +5,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>DocPropertyTypes</code></pre>
+            <td> public</td>
+            <td>
+                enum
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">DocPropertyTypes</h1>
             </th>
         </tr>
     </thead>
@@ -14,12 +20,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                enum
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -42,8 +42,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>access</code></pre>
+            <td> public</td>
+            <td>
+                property
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">access</h1>
             </th>
         </tr>
     </thead>
@@ -51,12 +57,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                property
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -75,8 +75,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>kind</code></pre>
+            <td> public</td>
+            <td>
+                property
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">kind</h1>
             </th>
         </tr>
     </thead>
@@ -84,12 +90,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                property
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -108,8 +108,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>descriptors</code></pre>
+            <td> public</td>
+            <td>
+                property
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">descriptors</h1>
             </th>
         </tr>
     </thead>
@@ -117,12 +123,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                property
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -141,8 +141,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>values</code></pre>
+            <td> public</td>
+            <td>
+                property
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">values</h1>
             </th>
         </tr>
     </thead>
@@ -150,12 +156,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                property
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -174,8 +174,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>writings</code></pre>
+            <td> public</td>
+            <td>
+                property
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">writings</h1>
             </th>
         </tr>
     </thead>
@@ -183,12 +189,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                property
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -207,8 +207,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>access</code></pre>
+            <td><span v-if="!!properties['is_static']">Static</span> public</td>
+            <td>
+                get
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">access</h1>
             </th>
         </tr>
     </thead>
@@ -216,12 +222,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td><span v-if="!!properties['is_static']">Static</span> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <tr v-if="!!properties['return']">
             <td>
                 <h4>returns</h4>

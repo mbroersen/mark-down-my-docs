@@ -6,8 +6,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>constructor</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">constructor</h1>
             </th>
         </tr>
     </thead>
@@ -15,12 +21,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
@@ -50,8 +50,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>parse</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">parse</h1>
             </th>
         </tr>
     </thead>
@@ -59,12 +65,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
@@ -96,8 +96,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>cleanUnusedProperties</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">cleanUnusedProperties</h1>
             </th>
         </tr>
     </thead>
@@ -105,12 +111,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
@@ -148,8 +148,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>parseContentProperty</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">parseContentProperty</h1>
             </th>
         </tr>
     </thead>
@@ -157,12 +163,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
@@ -204,8 +204,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>parseVFor</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">parseVFor</h1>
             </th>
         </tr>
     </thead>
@@ -213,12 +219,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
@@ -260,8 +260,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>parseBindingProperty</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">parseBindingProperty</h1>
             </th>
         </tr>
     </thead>
@@ -269,12 +275,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
@@ -312,8 +312,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>parseVIf</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">parseVIf</h1>
             </th>
         </tr>
     </thead>
@@ -321,12 +327,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>

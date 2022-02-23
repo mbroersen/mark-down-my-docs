@@ -5,17 +5,23 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>SourceDirectory</code></pre>
+            <td> public</td>
+            <td>
+                class
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">SourceDirectory</h1>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="Index.md">Go to index</a>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="">Go to source</a>
             </th>
         </tr>
@@ -24,12 +30,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                class
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -67,8 +67,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>constructor</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">constructor</h1>
             </th>
         </tr>
     </thead>
@@ -76,12 +82,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
@@ -111,8 +111,15 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>read</code></pre>
+            <td> public</td>
+            <td>
+                <span v-if="!!properties['is_generator']">Generator</span>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">read</h1>
             </th>
         </tr>
     </thead>
@@ -120,13 +127,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                <span v-if="!!properties['is_generator']">Generator</span>
-                method
-            </td>
-        </tr>
         <tr v-if="!!properties['return']">
             <td>
                 <h4>returns</h4>
@@ -159,8 +159,15 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>scanDirectory</code></pre>
+            <td> public</td>
+            <td>
+                <span v-if="!!properties['is_generator']">Generator</span>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">scanDirectory</h1>
             </th>
         </tr>
     </thead>
@@ -168,13 +175,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                <span v-if="!!properties['is_generator']">Generator</span>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>

@@ -6,8 +6,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>parseContentProperty</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">parseContentProperty</h1>
             </th>
         </tr>
     </thead>
@@ -15,12 +21,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>

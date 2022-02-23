@@ -5,17 +5,23 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>Documentation</code></pre>
+            <td> public</td>
+            <td>
+                class
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">Documentation</h1>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="Index.md">Go to index</a>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="">Go to source</a>
             </th>
         </tr>
@@ -24,12 +30,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                class
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -61,8 +61,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>constructor</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">constructor</h1>
             </th>
         </tr>
     </thead>
@@ -70,12 +76,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
@@ -107,8 +107,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>write</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">write</h1>
             </th>
         </tr>
     </thead>
@@ -116,12 +122,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
     </tbody>
 </table>
 

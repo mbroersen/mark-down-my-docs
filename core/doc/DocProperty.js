@@ -24,7 +24,7 @@ class DocProperty {
      * @return {boolean}
      */
     get hasContent() {
-        return this._content !== null;
+        return this._content.trim().length > 0;
     }
 
     /**

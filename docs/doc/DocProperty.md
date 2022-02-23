@@ -5,17 +5,23 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>DocProperty</code></pre>
+            <td> public</td>
+            <td>
+                class
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">DocProperty</h1>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="../Index.md">Go to index</a>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="">Go to source</a>
             </th>
         </tr>
@@ -24,12 +30,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                class
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -48,8 +48,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>constructor</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">constructor</h1>
             </th>
         </tr>
     </thead>
@@ -57,12 +63,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
@@ -103,8 +103,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>hasContent</code></pre>
+            <td> public</td>
+            <td>
+                get
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">hasContent</h1>
             </th>
         </tr>
     </thead>
@@ -112,12 +118,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <tr v-if="!!properties['return']">
             <td>
                 <h4>returns</h4>
@@ -144,8 +144,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>content</code></pre>
+            <td> public</td>
+            <td>
+                get
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">content</h1>
             </th>
         </tr>
     </thead>
@@ -153,12 +159,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <tr v-if="!!properties['return']">
             <td>
                 <h4>returns</h4>
@@ -185,8 +185,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>name</code></pre>
+            <td> public</td>
+            <td>
+                get
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">name</h1>
             </th>
         </tr>
     </thead>
@@ -194,12 +200,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <tr v-if="!!properties['return']">
             <td>
                 <h4>returns</h4>

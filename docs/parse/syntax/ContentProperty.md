@@ -5,17 +5,23 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>ContentProperty</code></pre>
+            <td> public</td>
+            <td>
+                class
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">ContentProperty</h1>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="../../Index.md">Go to index</a>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="">Go to source</a>
             </th>
         </tr>
@@ -24,12 +30,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                class
-            </td>
-        </tr>
     </tbody>
 </table>
 
@@ -48,8 +48,14 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <pre><code>parse</code></pre>
+            <td> public</td>
+            <td>
+                method
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!properties['deprecated']">parse</h1>
             </th>
         </tr>
     </thead>
@@ -57,12 +63,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td> public</td>
-            <td>
-                method
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>

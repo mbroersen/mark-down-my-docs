@@ -3,6 +3,8 @@ const DocDescription = require('./DocDescription');
 
 /**
  * @class
+ * @deprecated
+ * @test
  */
 class DocBlock {
 

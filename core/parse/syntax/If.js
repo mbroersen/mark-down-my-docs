@@ -30,9 +30,6 @@ class If {
      * @return {string}
      */
     parse(content, properties) {
-
-
-
         if (eval(this.statement) === false) {
             return this.removeBlockFromContent(content);
         }

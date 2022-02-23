@@ -18,6 +18,7 @@ class DocDescription {
             author: null,
             copyright: null,
             description: null,
+            deprecated: false,
             example: null,
             is_generator: false,
             is_static: false,
@@ -54,7 +55,7 @@ class DocDescription {
             }
 
             if (this.data.hasOwnProperty(property.name)) {
-                this.data[property.name] = property.content;
+                this.data[property.name] = property.hasContent ? property.content : true;
             }
         }
     }
@@ -86,10 +87,6 @@ class DocDescription {
             this.data.is_generator = true;
         }
 
-        if (match.groups?.kind) {
-            this.data.kind = match.groups?.kind;
-        }
-
         if (match.groups?.is_method) {
             this.data.kind = 'method';
         }
@@ -97,6 +94,11 @@ class DocDescription {
         if (match.groups?.is_property) {
             this.data.kind = 'property';
         }
+
+        if (match.groups?.kind) {
+            this.data.kind = match.groups?.kind;
+        }
+
         this.data.name = this.docBlock.ownerName;
         this.describeParams(match.groups.params);
         this.describeFromProperties();

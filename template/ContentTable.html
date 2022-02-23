@@ -3,18 +3,26 @@
 <table>
     <thead>
         <tr>
-            <th colSpan="4">
-                <span v-if="!!properties['deprecated']"><s>Deprecated</s></span>
-                <pre><code>{{name}}</code></pre>
+            <td><span v-if="!!properties['is_static']">Static</span> {{access}}</td>
+            <td>
+                <span v-if="!!properties['is_generator']">Generator</span>
+                <span v-if="!!properties['is_async']">ASync</span>
+                {{kind}}
+            </td>
+        </tr>
+        <tr>
+            <th colSpan="2">
+                <h1 v-if="!!properties['deprecated']"><s>{{name}}</s> <small><small><sup>deprecated</sup></small></small></h1>
+                <h1 v-if="!properties['deprecated']">{{name}}</h1>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="{{index_path}}">Go to index</a>
             </th>
         </tr>
         <tr v-if="properties['kind'] === 'class'">
-            <th>
+            <th colSpan="2">
                 <a href="{{sourc_path}}">Go to source</a>
             </th>
         </tr>
@@ -23,14 +31,6 @@
 
 <table>
     <tbody>
-        <tr>
-            <td><span v-if="!!properties['is_static']">Static</span> {{access}}</td>
-            <td>
-                <span v-if="!!properties['is_generator']">Generator</span>
-                <span v-if="!!properties['is_async']">ASync</span>
-                {{kind}}
-            </td>
-        </tr>
         <trs v-if="properties['params'].length > 0">
             <td>
                 <h4>params</h4>
