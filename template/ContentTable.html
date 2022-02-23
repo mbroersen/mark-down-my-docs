@@ -1,62 +1,79 @@
-[Go back to index]({{index_path}})
----
+
+
 <table>
     <thead>
         <tr>
             <th colSpan="4">
+                <span v-if="!!properties['deprecated']"><s>Deprecated</s></span>
                 <pre><code>{{name}}</code></pre>
             </th>
         </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="{{index_path}}">Go to index</a>
+            </th>
+        </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="{{sourc_path}}">Go to source</a>
+            </th>
+        </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>{{access}}</td>
-            <td>{{kind}}</td>
-            <td><span v-if="is_static">Static</span></td>
-            <td><span v-if="async">ASync</span></td>
+            <td><span v-if="!!properties['is_static']">Static</span> {{access}}</td>
+            <td>
+                <span v-if="!!properties['is_generator']">Generator</span>
+                <span v-if="!!properties['is_async']">ASync</span>
+                {{kind}}
+            </td>
         </tr>
-        <tr>
-            <td>{{since}}</td>
-            <td><span v-if="deprecated"><b>Deprecated</b></span></td>
-            <td><span v-if="is_generator">Generator</span></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
+        <trs v-if="properties['params'].length > 0">
+            <td>
                 <h4>params</h4>
             </td>
-        </tr>
-        <tr v-for="param in params">
-            <td colspan="2"><b>{{param}}</b></td>
-            <td colspan="2"><code>{{param_name}}</code></td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
+            <td>
+                <table>
+                    <tr v-for="param in params">
+                        <td><b>{{param}}</b></td>
+                        <td><code>{{param_name}}</code></td>
+                    </tr>
+                </table>
+            </td>
+        </trs>
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{{return}}</code></h4>
+            <td>
+                <pre><code>{{return}}</code></pre>
             </td>
         </tr>
-        <tr v-if="todo">
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr v-if="!!properties['todo']">
             <td>Todo</td>
             <td colSpan="3">{{todo}}</td>
         </tr>
-        <tr v-if="description">
+        <tr v-if="!!properties['description']">
             <td>Description</td>
             <td colSpan="3">
                 {{description}}
             </td>
         </tr>
-        <tr v-if="see">
+        <tr v-if="!!properties['see']">
             <td>See</td>
             <td colSpan="3" content="md"><a href="{{see}}">{{see}}</a></td>
         </tr>
     </tbody>
     <tfoot>
-    <tr v-if="author">
+    <tr v-if="!!properties['author']">
         <td>{{licence}}</td>
         <td>{{copyright}}</td>
         <td>{{author}}</td>
@@ -65,9 +82,7 @@
     </tfoot>
 </table>
 
-[source_code]({{source_code}})
-
-<h3 v-if="example">example</h3>
+<h3 v-if="!!properties['example']">example</h3>
 
 {{example}}
 

@@ -23,6 +23,8 @@ class If {
 
     /**
      *
+     * @todo use eval to check the real statement
+     *
      * @param content
      * @param properties
      * @return {string}
@@ -30,17 +32,23 @@ class If {
     parse(content, properties) {
 
 
-        if (!properties.hasOwnProperty(this.statement)) {
+
+        if (eval(this.statement) === false) {
             return this.removeBlockFromContent(content);
         }
 
-        if (Array.isArray(properties[this.statement]) && properties[this.statement].length === 0) {
-            return this.removeBlockFromContent(content);
-        }
 
-        if (!Array.isArray(properties[this.statement]) && !properties[this.statement]) {
-            return this.removeBlockFromContent(content);
-        }
+        // if (!properties.hasOwnProperty(this.statement)) {
+        //     return this.removeBlockFromContent(content);
+        // }
+        //
+        // if (Array.isArray(properties[this.statement]) && properties[this.statement].length === 0) {
+        //     return this.removeBlockFromContent(content);
+        // }
+        //
+        // if (!Array.isArray(properties[this.statement]) && !properties[this.statement]) {
+        //     return this.removeBlockFromContent(content);
+        // }
 
         return content;
     }

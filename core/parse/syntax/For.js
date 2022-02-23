@@ -15,6 +15,7 @@ class For {
         const vForTemplate =  this.contentBlock;
         let vForContentResult = '';
         let propertyName = this.matchGroups?.loop_property;
+
         for (const propertyValue of values) {
             vForContentResult += `<${htmlElement}>` + this.parseContentProperty(vForTemplate, propertyName, propertyValue) + `</${htmlElement}>`;
         }
@@ -35,7 +36,6 @@ class For {
         }
         return content.replace(`{{${name}}}`, value);
     }
-
 }
 
 module.exports = For;
