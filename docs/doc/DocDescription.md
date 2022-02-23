@@ -1,7 +1,7 @@
 
 # class DocDescription 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -9,23 +9,35 @@
                 <pre><code>DocDescription</code></pre>
             </th>
         </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="../Index.md">Go to index</a>
+            </th>
+        </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="">Go to source</a>
+            </th>
+        </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>class</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                class
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            </tbody>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
-    <tr v-if="author">
+    <tr v-if="!!properties['author']">
         <td>MIT</td>
         <td></td>
         <td>Mark Broersen</td>
@@ -34,13 +46,11 @@
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocDescription.js)
-
 
 ## constructor(docBlock)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -49,38 +59,42 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
-                <h4>params</h4>
+            <td> public</td>
+            <td>
+                method
             </td>
         </tr>
-        <tr>            <td colspan="2"><b>docBlock</b></td>
-            <td colspan="2"><code></code></td>
-</tr>    </tbody>
+        <trs v-if="properties['params'].length > 0">
+            <td>
+                <h4>params</h4>
+            </td>
+            <td>
+                <table>
+                    <tr>                        <td><b>docBlock</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocDescription.js)
-
 
 ## get ownerParts()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -89,41 +103,39 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{RegExpMatchArray}</code></h4>
+            <td>
+                <pre><code>{RegExpMatchArray}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocDescription.js)
-
 
 ## describeFromProperties()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -132,31 +144,31 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            </tbody>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocDescription.js)
-
 
 ## describeParams(paramsMatch)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -165,38 +177,42 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
-                <h4>params</h4>
+            <td> public</td>
+            <td>
+                method
             </td>
         </tr>
-        <tr>            <td colspan="2"><b>paramsMatch</b></td>
-            <td colspan="2"><code></code></td>
-</tr>    </tbody>
+        <trs v-if="properties['params'].length > 0">
+            <td>
+                <h4>params</h4>
+            </td>
+            <td>
+                <table>
+                    <tr>                        <td><b>paramsMatch</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocDescription.js)
-
 
 ## describe()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -205,30 +221,30 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: [], example: null}}</code></h4>
+            <td>
+                <pre><code>{|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: [], example: null}}</code></pre>
             </td>
         </tr>
-        <tr v-if="todo">
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr v-if="!!properties['todo']">
             <td>Todo</td>
             <td colSpan="3">clean up code for creating</td>
         </tr>
@@ -236,6 +252,4 @@
     <tfoot>
     </tfoot>
 </table>
-
-[source_code](../../core/doc/DocDescription.js)
 

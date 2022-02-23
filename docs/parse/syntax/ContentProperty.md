@@ -1,7 +1,7 @@
 
 # class ContentProperty 
-[Go back to index](../../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -9,32 +9,42 @@
                 <pre><code>ContentProperty</code></pre>
             </th>
         </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="../../Index.md">Go to index</a>
+            </th>
+        </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="">Go to source</a>
+            </th>
+        </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>class</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                class
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            </tbody>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../../core/parse/syntax/ContentProperty.js)
-
 
 ## parse(content, name, value)
 
-[Go back to index](../../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -43,44 +53,46 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
+        <trs v-if="properties['params'].length > 0">
+            <td>
                 <h4>params</h4>
             </td>
-        </tr>
-        <tr>            <td colspan="2"><b>content</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> name</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> value</b></td>
-            <td colspan="2"><code></code></td>
-</tr>        <tr v-if="return">
-            <td colSpan="4">
+            <td>
+                <table>
+                    <tr>                        <td><b>content</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> name</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> value</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{}</code></h4>
+            <td>
+                <pre><code>{}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
-
-[source_code](../../../core/parse/syntax/ContentProperty.js)
 

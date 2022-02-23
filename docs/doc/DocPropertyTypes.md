@@ -1,7 +1,7 @@
 
 # class DocPropertyTypes 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -10,20 +10,22 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>enum</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                enum
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="see">
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr v-if="!!properties['see']">
             <td>See</td>
             <td colSpan="3" content="md"><a href="`https://jsdoc.app/`"></a></td>
         </tr>
@@ -32,13 +34,11 @@
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocPropertyTypes.js)
-
 
 ## #access
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -47,31 +47,31 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>property</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                property
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            </tbody>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocPropertyTypes.js)
-
 
 ## #kind
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -80,31 +80,31 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>property</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                property
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            </tbody>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocPropertyTypes.js)
-
 
 ## #descriptors
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -113,31 +113,31 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>property</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                property
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            </tbody>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocPropertyTypes.js)
-
 
 ## #values
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -146,31 +146,31 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>property</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                property
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            </tbody>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocPropertyTypes.js)
-
 
 ## #writings
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -179,31 +179,31 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>property</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                property
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            </tbody>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocPropertyTypes.js)
-
 
 ## static get access()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -212,33 +212,31 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td><span v-if="is_static">Static</span></td>
-            <td></td>
+            <td><span v-if="!!properties['is_static']">Static</span> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code></code></h4>
+            <td>
+                <pre><code></code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
-
-[source_code](../../core/doc/DocPropertyTypes.js)
 

@@ -1,8 +1,8 @@
 
 ## constructor(templateReader)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -11,38 +11,42 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
-                <h4>params</h4>
+            <td> public</td>
+            <td>
+                method
             </td>
         </tr>
-        <tr>            <td colspan="2"><b>templateReader</b></td>
-            <td colspan="2"><code></code></td>
-</tr>    </tbody>
+        <trs v-if="properties['params'].length > 0">
+            <td>
+                <h4>params</h4>
+            </td>
+            <td>
+                <table>
+                    <tr>                        <td><b>templateReader</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/parse/Template.js)
-
 
 ## parse(docBlock, paths)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -51,40 +55,44 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
-                <h4>params</h4>
+            <td> public</td>
+            <td>
+                method
             </td>
         </tr>
-        <tr>            <td colspan="2"><b>docBlock</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> paths</b></td>
-            <td colspan="2"><code></code></td>
-</tr>    </tbody>
+        <trs v-if="properties['params'].length > 0">
+            <td>
+                <h4>params</h4>
+            </td>
+            <td>
+                <table>
+                    <tr>                        <td><b>docBlock</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> paths</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/parse/Template.js)
-
 
 ## cleanUnusedProperties(content)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -93,48 +101,50 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
+        <trs v-if="properties['params'].length > 0">
+            <td>
                 <h4>params</h4>
             </td>
-        </tr>
-        <tr>            <td colspan="2"><b>content</b></td>
-            <td colspan="2"><code></code></td>
-</tr>        <tr v-if="return">
-            <td colSpan="4">
+            <td>
+                <table>
+                    <tr>                        <td><b>content</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>string</code></h4>
+            <td>
+                <pre><code>string</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/parse/Template.js)
-
 
 ## parseContentProperty(content, name, value)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -143,52 +153,54 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
+        <trs v-if="properties['params'].length > 0">
+            <td>
                 <h4>params</h4>
             </td>
-        </tr>
-        <tr>            <td colspan="2"><b>content</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> name</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> value</b></td>
-            <td colspan="2"><code></code></td>
-</tr>        <tr v-if="return">
-            <td colSpan="4">
+            <td>
+                <table>
+                    <tr>                        <td><b>content</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> name</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> value</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>string</code></h4>
+            <td>
+                <pre><code>string</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/parse/Template.js)
-
 
 ## parseVFor(content, name, values)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -197,52 +209,54 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
+        <trs v-if="properties['params'].length > 0">
+            <td>
                 <h4>params</h4>
             </td>
-        </tr>
-        <tr>            <td colspan="2"><b>content</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> name</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> values</b></td>
-            <td colspan="2"><code></code></td>
-</tr>        <tr v-if="return">
-            <td colSpan="4">
+            <td>
+                <table>
+                    <tr>                        <td><b>content</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> name</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> values</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>string</code></h4>
+            <td>
+                <pre><code>string</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/parse/Template.js)
-
 
 ## parseBindingProperty(content, bindingName, bindingValue)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -251,31 +265,37 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
-                <h4>params</h4>
+            <td> public</td>
+            <td>
+                method
             </td>
         </tr>
-        <tr>            <td colspan="2"><b>content</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> bindingName</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> bindingValue</b></td>
-            <td colspan="2"><code></code></td>
-</tr>        <tr v-if="todo">
+        <trs v-if="properties['params'].length > 0">
+            <td>
+                <h4>params</h4>
+            </td>
+            <td>
+                <table>
+                    <tr>                        <td><b>content</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> bindingName</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> bindingValue</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr v-if="!!properties['todo']">
             <td>Todo</td>
             <td colSpan="3">create regex</td>
         </tr>
@@ -284,13 +304,11 @@
     </tfoot>
 </table>
 
-[source_code](../../core/parse/Template.js)
-
 
 ## parseVIf(content, properties)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -299,42 +317,44 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
+        <trs v-if="properties['params'].length > 0">
+            <td>
                 <h4>params</h4>
             </td>
-        </tr>
-        <tr>            <td colspan="2"><b>content</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> properties</b></td>
-            <td colspan="2"><code></code></td>
-</tr>        <tr v-if="return">
-            <td colSpan="4">
+            <td>
+                <table>
+                    <tr>                        <td><b>content</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> properties</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{string}</code></h4>
+            <td>
+                <pre><code>{string}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
-
-[source_code](../../core/parse/Template.js)
 

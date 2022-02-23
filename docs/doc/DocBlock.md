@@ -1,7 +1,7 @@
 
 # class DocBlock 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -9,32 +9,42 @@
                 <pre><code>DocBlock</code></pre>
             </th>
         </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="../Index.md">Go to index</a>
+            </th>
+        </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="">Go to source</a>
+            </th>
+        </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>class</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                class
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-            </tbody>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocBlock.js)
-
 
 ## constructor(sourcePath, owner, content)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -43,42 +53,46 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
-                <h4>params</h4>
+            <td> public</td>
+            <td>
+                method
             </td>
         </tr>
-        <tr>            <td colspan="2"><b>sourcePath</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> owner</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> content</b></td>
-            <td colspan="2"><code></code></td>
-</tr>    </tbody>
+        <trs v-if="properties['params'].length > 0">
+            <td>
+                <h4>params</h4>
+            </td>
+            <td>
+                <table>
+                    <tr>                        <td><b>sourcePath</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> owner</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> content</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocBlock.js)
-
 
 ## get inDocsPath()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -87,41 +101,39 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{string}</code></h4>
+            <td>
+                <pre><code>{string}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocBlock.js)
-
 
 ## get owner()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -130,41 +142,39 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{string}</code></h4>
+            <td>
+                <pre><code>{string}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocBlock.js)
-
 
 ## get ownerName()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -173,41 +183,39 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{string | undefined}</code></h4>
+            <td>
+                <pre><code>{string | undefined}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocBlock.js)
-
 
 ## describe()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -216,41 +224,39 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: [], example: null}}</code></h4>
+            <td>
+                <pre><code>{|{access: string, is_static: boolean, kind: null, name: null, description: null, is_generator: boolean, returns: null, params: [], example: null}}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocBlock.js)
-
 
 ## * properties()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -259,41 +265,40 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                <span v-if="!!properties['is_generator']">Generator</span>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><span v-if="is_generator">Generator</span></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{Generator&lt;DocProperty, void, any&gt;}</code></h4>
+            <td>
+                <pre><code>{Generator&lt;DocProperty, void, any&gt;}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/doc/DocBlock.js)
-
 
 ## propertiesInContent()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -302,33 +307,31 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{IterableIterator&lt;RegExpMatchArray&gt;}</code></h4>
+            <td>
+                <pre><code>{IterableIterator&lt;RegExpMatchArray&gt;}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
-
-[source_code](../../core/doc/DocBlock.js)
 

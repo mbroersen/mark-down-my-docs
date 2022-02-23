@@ -1,7 +1,7 @@
 
 # class Source 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -9,21 +9,33 @@
                 <pre><code>Source</code></pre>
             </th>
         </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="../Index.md">Go to index</a>
+            </th>
+        </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="">Go to source</a>
+            </th>
+        </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>class</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                class
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="description">
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr v-if="!!properties['description']">
             <td>Description</td>
             <td colSpan="3">
                 Reads contents of javascript or typescript file
@@ -34,9 +46,7 @@
     </tfoot>
 </table>
 
-[source_code](../../core/read/Source.js)
-
-<h3 v-if="example">example</h3>
+<h3 v-if="!!properties['example']">example</h3>
 
  ```js
   const source = new Source('./helloWorld.js');
@@ -50,8 +60,8 @@
 
 ## constructor(path)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -60,38 +70,42 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
-                <h4>params</h4>
+            <td> public</td>
+            <td>
+                method
             </td>
         </tr>
-        <tr>            <td colspan="2"><b>path</b></td>
-            <td colspan="2"><code></code></td>
-</tr>    </tbody>
+        <trs v-if="properties['params'].length > 0">
+            <td>
+                <h4>params</h4>
+            </td>
+            <td>
+                <table>
+                    <tr>                        <td><b>path</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/read/Source.js)
-
 
 ## get basename()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -100,41 +114,39 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{string}</code></h4>
+            <td>
+                <pre><code>{string}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/read/Source.js)
-
 
 ## get relativePath()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -143,41 +155,39 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{string}</code></h4>
+            <td>
+                <pre><code>{string}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/read/Source.js)
-
 
 ## dockBlocksInContent(content)
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -186,48 +196,50 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
+        <trs v-if="properties['params'].length > 0">
+            <td>
                 <h4>params</h4>
             </td>
-        </tr>
-        <tr>            <td colspan="2"><b>content</b></td>
-            <td colspan="2"><code></code></td>
-</tr>        <tr v-if="return">
-            <td colSpan="4">
+            <td>
+                <table>
+                    <tr>                        <td><b>content</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{IterableIterator&lt;RegExpMatchArray&gt;}</code></h4>
+            <td>
+                <pre><code>{IterableIterator&lt;RegExpMatchArray&gt;}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/read/Source.js)
-
 
 ## hasDockBlocks()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -236,41 +248,39 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{RegExpMatchArray|false}</code></h4>
+            <td>
+                <pre><code>{RegExpMatchArray|false}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/read/Source.js)
-
 
 ## readFile()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -279,41 +289,39 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{string}</code></h4>
+            <td>
+                <pre><code>{string}</code></pre>
             </td>
         </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
     </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../../core/read/Source.js)
-
 
 ## * read()
 
-[Go back to index](../Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -322,30 +330,31 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                <span v-if="!!properties['is_generator']">Generator</span>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><span v-if="is_generator">Generator</span></td>
-            <td></td>
-        </tr>
-                <tr v-if="return">
-            <td colSpan="4">
+        <tr v-if="!!properties['return']">
+            <td>
                 <h4>returns</h4>
             </td>
-        </tr>
-        <tr v-if="return">
-            <td colSpan="4">
-                <h4><code>{Generator&lt;DocBlock, void, any&gt;}</code></h4>
+            <td>
+                <pre><code>{Generator&lt;DocBlock, void, any&gt;}</code></pre>
             </td>
         </tr>
-        <tr v-if="description">
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr v-if="!!properties['description']">
             <td>Description</td>
             <td colSpan="3">
                 All parsable DocBlocks in source
@@ -355,6 +364,4 @@
     <tfoot>
     </tfoot>
 </table>
-
-[source_code](../../core/read/Source.js)
 

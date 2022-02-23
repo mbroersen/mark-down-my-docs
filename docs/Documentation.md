@@ -1,7 +1,7 @@
 
 # class Documentation 
-[Go back to index](Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -9,21 +9,33 @@
                 <pre><code>Documentation</code></pre>
             </th>
         </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="Index.md">Go to index</a>
+            </th>
+        </tr>
+        <tr v-if="properties['kind'] === 'class'">
+            <th>
+                <a href="">Go to source</a>
+            </th>
+        </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>class</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                class
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="description">
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr v-if="!!properties['description']">
             <td>Description</td>
             <td colSpan="3">
                 Bridge for reader and writer
@@ -34,9 +46,7 @@
     </tfoot>
 </table>
 
-[source_code](../core/Documentation.js)
-
-<h3 v-if="example">example</h3>
+<h3 v-if="!!properties['example']">example</h3>
 
  ```js
   const docs = new Documentation(reader, writer);
@@ -46,8 +56,8 @@
 
 ## constructor(source, writer)
 
-[Go back to index](Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -56,40 +66,44 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr v-if="params">
-            <td colSpan="4">
-                <h4>params</h4>
+            <td> public</td>
+            <td>
+                method
             </td>
         </tr>
-        <tr>            <td colspan="2"><b>source</b></td>
-            <td colspan="2"><code></code></td>
-</tr><tr>            <td colspan="2"><b> writer</b></td>
-            <td colspan="2"><code></code></td>
-</tr>    </tbody>
+        <trs v-if="properties['params'].length > 0">
+            <td>
+                <h4>params</h4>
+            </td>
+            <td>
+                <table>
+                    <tr>                        <td><b>source</b></td>
+                        <td><code></code></td>
+</tr><tr>                        <td><b> writer</b></td>
+                        <td><code></code></td>
+</tr>                </table>
+            </td>
+        </trs>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+    </tbody>
     <tfoot>
     </tfoot>
 </table>
 
-[source_code](../core/Documentation.js)
-
 
 ## write()
 
-[Go back to index](Index.md)
----
+
+
 <table>
     <thead>
         <tr>
@@ -98,20 +112,22 @@
             </th>
         </tr>
     </thead>
+</table>
+
+<table>
     <tbody>
         <tr>
-            <td>public</td>
-            <td>method</td>
-            <td></td>
-            <td></td>
+            <td> public</td>
+            <td>
+                method
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-                <tr v-if="description">
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr v-if="!!properties['description']">
             <td>Description</td>
             <td colSpan="3">
                 start writing the documentation
@@ -121,6 +137,4 @@
     <tfoot>
     </tfoot>
 </table>
-
-[source_code](../core/Documentation.js)
 
