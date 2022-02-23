@@ -65,10 +65,12 @@
         </tr>
     </tbody>
     <tfoot>
-    <tr v-if="!!properties['author']">
+    <tr v-if="!!properties['licence'] || !!properties['author']">
         <td>{{licence}}</td>
-        <td>{{copyright}}</td>
         <td>{{author}}</td>
+    </tr>
+    <tr v-if="!!properties['copyright'] || !!properties['version']">
+        <td>{{copyright}}</td>
         <td>{{version}}</td>
     </tr>
     </tfoot>

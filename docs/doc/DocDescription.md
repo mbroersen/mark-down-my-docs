@@ -29,11 +29,9 @@
     <tbody>
     </tbody>
     <tfoot>
-    <tr v-if="!!properties['author']">
+    <tr v-if="!!properties['licence'] || !!properties['author']">
         <td>MIT</td>
-        <td></td>
         <td>Mark Broersen</td>
-        <td></td>
     </tr>
     </tfoot>
 </table>
